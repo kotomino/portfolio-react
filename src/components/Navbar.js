@@ -10,12 +10,9 @@ const useStyles = makeStyles((theme) => ({
   navbar: {
     backgroundColor: fade("#F0FFFF", 0),
   },
-  firstItem: {
-    marginLeft: theme.spacing(2),
-    flexGrow: 1
-  },
   navItem: {
     flexGrow: 1,
+    marginLeft: theme.spacing(10),
   },
 }));
 
@@ -27,31 +24,25 @@ const Navbar = () => {
     <div className={classes.root}>
       <AppBar position="static" className={classes.navbar} elevation={0}>
         <Toolbar>
-        
+        <Container>
           <Grid container>
-            <Grid item xs={8} />
-            <Grid item xs={1}>
-              <Typography variant="h6" className={classes.firstItem} color="textPrimary" >
+            <Grid item xs={6} md={9} />
+            <Grid item xs={6} md={3} >
+              <Typography variant="body1" className={classes.navItem} color="textPrimary" display="inline">
                 About
               </Typography>
-            </Grid>
-            <Grid item xs={1}>
-              <Typography variant="h6" className={classes.navItem} color="textPrimary" >
+              <Typography variant="body1" className={classes.navItem} color="textPrimary" display="inline">
                 Projects
               </Typography>
-            </Grid>
-            <Grid item xs={1}>
-              <Typography variant="h6" className={classes.navItem} color="textPrimary" >
+              <Typography variant="body1" className={classes.navItem} color="textPrimary" display="inline">
                 Resume
               </Typography>
-            </Grid>
-            <Grid item xs={1}>
-              <Typography variant="h6" className={classes.navItem} color="textPrimary" >
+              <Typography variant="body1" className={classes.navItem} color="textPrimary" display="inline">
                 Contact
               </Typography>
             </Grid>  
             </Grid>
-             
+            </Container>
         </Toolbar>
        </AppBar>
     </div>
