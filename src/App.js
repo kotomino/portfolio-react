@@ -9,21 +9,29 @@ import Layout from './components/Layout';
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: '#E7E7E5'
+      main: '#FFFFFF'
     },
     secondary: {
-      main: '#f50057'
+      main: '#000000'
     },
     text: {
-      primary: "#99A3A4",
-      secondary: '#e6e6e6'
+      primary: "#C0C0C0",
+      secondary: '#22448B'
     },
-    typography: {
-      fontFamily: 'Antonio',
-      fontWeightLight: 100,
-      fontWeightRegular: 200,
-      fontWeightMedium: 300,
-      fontWeightBold: 400,
+  },
+  typography: {
+    h2: {
+      fontFamily: 'Montserrat',
+      fontSize: "4.5rem",
+      fontWeight: 600
+    },
+    h4: {
+      fontFamily: 'Montserrat',
+      fontSize: "1.6rem",
+    },
+    h6: {
+      fontFamily: 'Montserrat',
+      fontSize: "1rem"
     }
   }
 })
