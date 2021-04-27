@@ -13,12 +13,16 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: fade("#F0FFFF", 0),
   },
   navItem: {
-    // flexGrow: 1,
-    // marginLeft: theme.spacing(10),
+    '&:hover': {
+      color: 'white',
+      cursor: 'pointer'
+   }
   },
-  // button: {
-  //   float: 'right'
-  // }
+  button: {
+    '&:hover': {
+      color: 'white'
+   }
+  }
 }));
 
 const Navbar = () => {
