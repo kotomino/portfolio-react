@@ -1,38 +1,36 @@
+import { Button, Container, Grid, Typography } from '@material-ui/core'
 import React from 'react'
 import { withStyles } from '@material-ui/core/styles';
-import { Container } from '@material-ui/core';
 
 const styles = (theme) => ({
   root: {
     display: 'flex',
+    backgroundColor: theme.palette.grey.A400,
     overflow: 'hidden',
   },
   container: {
-    marginTop: theme.spacing(40),
-    marginBottom: theme.spacing(40),
+    marginTop: theme.spacing(10),
+    marginBottom: theme.spacing(10),
     position: 'relative',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
   },
-  blue: {
-    pointerEvents: 'none',
-    position: 'absolute',
-    top: -160,
-    opacity: 1,
-  },
 })
 
-const Projects = (props) => {
+const Footer = (props) => {
+
   const { classes } = props;
 
   return (
     <section className={classes.root}>
       <Container className={classes.container}>
-        Project Section
+        <Typography>
+         Footer
+        </Typography>
       </Container>
     </section>
   )
 }
 
-export default withStyles(styles)(Projects)
+export default withStyles(styles)(Footer);

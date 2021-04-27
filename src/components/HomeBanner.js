@@ -9,8 +9,8 @@ const styles = (theme) => ({
     overflow: 'hidden',
   },
   container: {
-    marginTop: theme.spacing(30),
-    marginBottom: theme.spacing(10),
+    marginTop: theme.spacing(25),
+    marginBottom: theme.spacing(15),
     position: 'relative',
     display: 'flex',
     flexDirection: 'column',
@@ -20,7 +20,7 @@ const styles = (theme) => ({
     marginTop: 30
   },
   button: {
-    marginTop: 170
+    marginTop: 200
   },
   title: {
     marginLeft: theme.spacing(-27),

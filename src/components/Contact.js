@@ -49,7 +49,7 @@ const Contact = (props) => {
         </Typography>
         <Grid item md={6}>
           <Typography>
-            My inbox is always open for new opportunities and connections. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+            My inbox is always open for new opportunities and connections. Whether you have a question or just want to say hello, I'll try my best to get back to you!
           </Typography>
         </Grid>
         <form className={classes.form} onSubmit={handleSubmit}>
