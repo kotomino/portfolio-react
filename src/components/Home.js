@@ -1,5 +1,6 @@
 import React from 'react'
 import AboutMe from './AboutMe';
+import Blogs from './Blogs';
 import Contact from './Contact';
 import DividerLine from './DividerLine';
 import HomeBanner from './HomeBanner';
@@ -10,9 +11,11 @@ const Home = () => {
     <div>
       <HomeBanner/>
       <AboutMe />
-      <DividerLine/>
+        <DividerLine/>
       <Projects />
-      <DividerLine/>
+        <DividerLine/>
+      <Blogs/>
+        <DividerLine/>
       <Contact />
     </div>
   )
