@@ -27,7 +27,7 @@ const Projects = (props) => {
   const { classes } = props;
 
   return (
-    <section className={classes.root}>
+    <section className={classes.root} id="projects">
       <Container className={classes.container}>
         Project Section
       </Container>

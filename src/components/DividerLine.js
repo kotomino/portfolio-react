@@ -6,8 +6,10 @@ import { Container } from '@material-ui/core';
 
 const styles = (theme) => ({
   image: {
-    height: 100,
-    alignItems: 'center'
+    height: 120,
+    alignItems: 'center',
+    display: 'flex',
+    overflow: 'hidden'
   }
 })
 

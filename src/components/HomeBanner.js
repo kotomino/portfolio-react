@@ -51,7 +51,7 @@ const HomeBanner = (props) => {
             I'm an Atlanta-based software engineer with a passion for making positive impact through technology. 
           </Typography>
         </Grid>
-        <Button variant="outlined" color="primary" className={classes.button}>
+        <Button variant="outlined" color="primary" className={classes.button} href="mailto:kotomi.noguchi@gmail.com">
           Get In Touch
         </Button>
       </Container>

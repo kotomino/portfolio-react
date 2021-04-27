@@ -5,7 +5,6 @@ import DividerLine from './DividerLine';
 import HomeBanner from './HomeBanner';
 import Projects from './Projects';
 
-
 const Home = () => {
   return (
     <div>

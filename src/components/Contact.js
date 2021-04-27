@@ -39,7 +39,7 @@ const Contact = (props) => {
   const [state, handleSubmit] = useForm("xknkonle");
 
   return (
-    <section className={classes.root}>
+    <section className={classes.root} id="contact">
       <Container className={classes.container}>
         <Typography variant="h6" color="textSecondary" align="center">
           What's Next?

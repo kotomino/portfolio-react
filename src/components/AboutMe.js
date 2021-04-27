@@ -29,7 +29,7 @@ const AboutMe = (props) => {
   const { classes } = props;
 
   return (
-    <section className={classes.root}>
+    <section className={classes.root} id="about">
       <Container className={classes.container}>
         <Grid container spacing={10}>
           <Grid item md={6} >
