@@ -9,7 +9,7 @@ const styles = (theme) => ({
     overflow: 'hidden',
   },
   container: {
-    marginTop: theme.spacing(20),
+    marginTop: theme.spacing(30),
     marginBottom: theme.spacing(10),
     position: 'relative',
     display: 'flex',
@@ -20,7 +20,13 @@ const styles = (theme) => ({
     marginTop: 30
   },
   button: {
-    marginTop: 50
+    marginTop: 170
+  },
+  title: {
+    marginLeft: theme.spacing(-27),
+  },
+  hi: {
+    marginLeft: -465
   }
 })
 
@@ -31,19 +37,19 @@ const HomeBanner = (props) => {
   return (
     <section className={classes.root}>
       <Container className={classes.container}>
-        <Typography variant="h6" align="center" color="primary">
+        <Typography variant="h6" align="center" color="primary" className={classes.hi}>
           Hi, my name is
         </Typography>
         <Typography variant="h2" color="textSecondary">
           Kotomi Noguchi
         </Typography>
-        <Typography variant="h4" color="primary">
+        <Typography variant="h4" color="secondary" className={classes.title}>
           Full Stack Software Engineer
         </Typography>
         <Grid item xs={12} sm={8} md={6} lg={6}>
-        <Typography color="primary" className={classes.desc}>
-          I'm an Atlanta-based software engineer with a passion for making positive impact through technology. 
-        </Typography>
+          <Typography color="primary" className={classes.desc}>
+            I'm an Atlanta-based software engineer with a passion for making positive impact through technology. 
+          </Typography>
         </Grid>
         <Button variant="outlined" color="primary" className={classes.button}>
           Get In Touch

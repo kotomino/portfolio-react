@@ -5,12 +5,11 @@ import { Container } from '@material-ui/core';
 const styles = (theme) => ({
   root: {
     display: 'flex',
-    backgroundColor: theme.palette.grey.A100,
     overflow: 'hidden',
   },
   container: {
-    marginTop: theme.spacing(30),
-    marginBottom: theme.spacing(30),
+    marginTop: theme.spacing(50),
+    marginBottom: theme.spacing(50),
     position: 'relative',
     display: 'flex',
     flexDirection: 'column',

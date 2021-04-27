@@ -12,7 +12,7 @@ const theme = createMuiTheme({
       main: '#FFFFFF'
     },
     secondary: {
-      main: '#000000'
+      main: '#FACA67'
     },
     text: {
       primary: "#C0C0C0",
@@ -31,7 +31,8 @@ const theme = createMuiTheme({
     },
     h6: {
       fontFamily: 'Montserrat',
-      fontSize: "1rem"
+      fontSize: "1rem",
+      fontWeight: 600
     }
   }
 })
