@@ -1,6 +1,7 @@
 import { Button, Container, Grid, Typography } from '@material-ui/core'
 import React from 'react'
 import { withStyles } from '@material-ui/core/styles';
+import GirlImage from './GirlImage';
 
 const styles = (theme) => ({
   root: {
@@ -20,10 +21,11 @@ const styles = (theme) => ({
     marginTop: 30
   },
   button: {
-    marginTop: 200
+    marginTop: 200,
+    marginLeft: 200
   },
   title: {
-    marginLeft: theme.spacing(-27),
+    marginLeft: theme.spacing(0),
   },
   hi: {
     marginLeft: -465
@@ -37,6 +39,8 @@ const HomeBanner = (props) => {
   return (
     <section className={classes.root}>
       <Container className={classes.container}>
+        <Grid container>
+      <Grid item lg={6}>
         <Typography variant="h6" align="center" color="primary" className={classes.hi}>
           Hi, my name is
         </Typography>
@@ -46,14 +50,17 @@ const HomeBanner = (props) => {
         <Typography variant="h4" color="secondary" className={classes.title}>
           Full Stack Software Engineer
         </Typography>
-        <Grid item xs={12} sm={8} md={6} lg={6}>
           <Typography color="primary" className={classes.desc}>
             I'm an Atlanta-based software engineer with a passion for making positive impact through technology. 
           </Typography>
-        </Grid>
-        <Button variant="outlined" color="primary" className={classes.button} href="mailto:kotomi.noguchi@gmail.com">
+          <Button variant="outlined" color="primary" className={classes.button} href="mailto:kotomi.noguchi@gmail.com">
           Get In Touch
         </Button>
+        </Grid>
+        <Grid item lg={6}>
+          <GirlImage />
+        </Grid>
+        </Grid>
       </Container>
     </section>
   )
