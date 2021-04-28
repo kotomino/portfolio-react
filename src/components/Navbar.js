@@ -1,7 +1,7 @@
 import React from 'react'
 import AppBar from '@material-ui/core/AppBar';
 import resume from '../assets/Resume.pdf'
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 import { Button, Container, fade, Grid, makeStyles, Toolbar, Typography } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     '&:hover': {
-      color: 'white'
+      color: 'white',
    }
   }
 }));
@@ -35,7 +35,7 @@ const Navbar = () => {
         <Toolbar>
           <Container>
             <Grid container spacing={1}>
-              <Grid item s={4} md={8} />
+              <Grid item s={2} md={7} />
               <Grid item s={2} md={1}>
                 <Link to="about" smooth={true} duration={600}>
                   <Typography variant="body1" className={classes.navItem} color="textPrimary" display="inline">
@@ -47,6 +47,13 @@ const Navbar = () => {
                 <Link to="projects" smooth={true} duration={1200}>
                   <Typography variant="body1" className={classes.navItem} color="textPrimary" display="inline">
                     Projects
+                  </Typography>
+                </Link>
+              </Grid>
+              <Grid item s={2} md={1}>
+                <Link to="blogs" smooth={true} duration={1200}>
+                  <Typography variant="body1" className={classes.navItem} color="textPrimary" display="inline">
+                    Blogs
                   </Typography>
                 </Link>
               </Grid>

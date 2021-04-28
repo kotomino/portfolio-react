@@ -1,7 +1,9 @@
+import React, { useEffect } from 'react'
 import { Container, Grid, Typography } from '@material-ui/core'
-import React from 'react'
 import bricks from '../assets/bricks.png';
 import { withStyles } from '@material-ui/core/styles';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const styles = (theme) => ({
   root: {
@@ -28,18 +30,22 @@ const styles = (theme) => ({
 const AboutMe = (props) => {
   const { classes } = props;
 
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, [])
+
   return (
-    <section className={classes.root} id="about">
-      <Container className={classes.container}>
+    <section className={classes.root} id="about" >
+      <Container className={classes.container} data-aos="fade-right">
         <Grid container spacing={10}>
-          <Grid item md={6} >
+          <Grid item md={6}>
             <img
               src={bricks} 
               className={classes.image}
               alt="blue"
             />
           </Grid>
-          <Grid item md={5} >
+          <Grid item md={5}>
             <Typography variant="h4" color="textSecondary" align="center" className={classes.aboutMe}>
               About Me
             </Typography>

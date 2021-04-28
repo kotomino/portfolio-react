@@ -1,7 +1,9 @@
+import React, { useEffect } from 'react'
 import { Button, Container, Grid, TextField, Typography } from '@material-ui/core'
-import React from 'react'
 import { withStyles } from '@material-ui/core/styles';
 import { useForm, ValidationError } from '@formspree/react';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const styles = (theme) => ({
   root: {
@@ -38,9 +40,13 @@ const Contact = (props) => {
 
   const [state, handleSubmit] = useForm("xknkonle");
 
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, [])
+
   return (
     <section className={classes.root} id="contact">
-      <Container className={classes.container}>
+      <Container className={classes.container} data-aos="fade-left">
         <Typography variant="h6" color="textSecondary" align="center">
           What's Next?
         </Typography>
