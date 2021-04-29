@@ -1,10 +1,10 @@
 import React from 'react'
 import AboutMe from './AboutMe';
-import Blogs from './Blogs';
-import Contact from './Contact';
+import Blogs from './BlogsSection';
+import Contact from './ContactSection';
 import DividerLine from './DividerLine';
-import HomeBanner from './HomeBanner';
-import Projects from './Projects';
+import HomeBanner from './HomeBannerSection';
+import Projects from './ProjectsSection';
 
 const Home = () => {
   return (

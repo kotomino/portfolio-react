@@ -38,6 +38,11 @@ const AboutMe = (props) => {
     <section className={classes.root} id="about" >
       <Container className={classes.container} data-aos="fade-right">
         <Grid container spacing={10}>
+          <Grid item xs={12}>
+            <Typography variant="h3" color="textSecondary" align="center" className={classes.aboutMe}>
+              About Me
+            </Typography>
+          </Grid>
           <Grid item md={6}>
             <img
               src={bricks} 
@@ -46,9 +51,6 @@ const AboutMe = (props) => {
             />
           </Grid>
           <Grid item md={5}>
-            <Typography variant="h4" color="textSecondary" align="center" className={classes.aboutMe}>
-              About Me
-            </Typography>
             <Typography className={classes.desc} color="textPrimary">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </Typography>

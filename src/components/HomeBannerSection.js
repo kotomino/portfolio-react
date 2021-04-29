@@ -21,7 +21,7 @@ const styles = (theme) => ({
     marginTop: 30
   },
   button: {
-    marginTop: 200,
+    marginTop: 150,
     marginLeft: 200
   },
   title: {
@@ -57,7 +57,7 @@ const HomeBanner = (props) => {
           Get In Touch
         </Button>
         </Grid>
-        <Grid item lg={6}>
+        <Grid item lg={6} sm={3}>
           <GirlImage />
         </Grid>
         </Grid>

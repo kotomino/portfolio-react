@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './components/Home';
-import Resume from './components/Resume';
 import './App.css';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core';
 import Layout from './components/Layout';
@@ -44,7 +43,6 @@ const App = () => {
         <Layout>
           <Switch>
             <Route exact path="/" component={ Home } />
-            <Route exact path="/resume" component={ Resume } /> 
           </Switch>
         </Layout>
       </Router>

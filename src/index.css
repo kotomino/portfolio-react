@@ -13,3 +13,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#stars {
+  animation: stars 1s linear infinite;
+}
+
+@keyframes stars {
+  50% {
+    opacity: 0;
+  }
+}
