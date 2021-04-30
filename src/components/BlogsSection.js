@@ -8,7 +8,7 @@ const styles = (theme) => ({
   root: {
     display: 'flex',
     overflow: 'hidden',
-    backgroundColor: theme.palette.grey.A400,
+    backgroundColor: "#29293d",
   },
   container: {
     marginTop: theme.spacing(40),

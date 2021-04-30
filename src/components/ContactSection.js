@@ -8,7 +8,7 @@ import 'aos/dist/aos.css';
 const styles = (theme) => ({
   root: {
     display: 'flex',
-    backgroundColor: theme.palette.grey.A400,
+    backgroundColor: "#29293d",
     overflow: 'hidden',
   },
   container: {

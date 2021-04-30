@@ -6,11 +6,11 @@ import GirlImage from './GirlImage';
 const styles = (theme) => ({
   root: {
     display: 'flex',
-    backgroundColor: theme.palette.grey.A400,
+    backgroundColor: "#29293d",
     overflow: 'hidden',
   },
   container: {
-    marginTop: theme.spacing(25),
+    marginTop: theme.spacing(30),
     marginBottom: theme.spacing(15),
     position: 'relative',
     display: 'flex',

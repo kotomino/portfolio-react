@@ -14,7 +14,7 @@ const styles = (theme) => ({
   root: {
     minWidth: 270,
     minHeight: 560,
-    backgroundColor: "#404040",
+    backgroundColor: "#33334d",
   },
   media: {
     margin: 0,

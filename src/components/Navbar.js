@@ -7,7 +7,7 @@ import { Button, Container, fade, Grid, makeStyles, Toolbar, Typography } from '
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    backgroundColor: theme.palette.grey.A400,
+    backgroundColor: "#29293d",
   },
   navbar: {
     backgroundColor: fade("#F0FFFF", 0),

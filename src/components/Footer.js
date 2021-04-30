@@ -5,7 +5,7 @@ import { withStyles } from '@material-ui/core/styles';
 const styles = (theme) => ({
   root: {
     display: 'flex',
-    backgroundColor: theme.palette.grey.A400,
+    backgroundColor: "#29293d",
     overflow: 'hidden',
   },
   container: {
@@ -25,7 +25,7 @@ const Footer = (props) => {
   return (
     <section className={classes.root}>
       <Container className={classes.container}>
-        <Typography>
+        <Typography color="primary">
          Footer
         </Typography>
       </Container>
