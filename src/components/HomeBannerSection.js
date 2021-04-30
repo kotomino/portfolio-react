@@ -44,10 +44,10 @@ const HomeBanner = (props) => {
         <Typography variant="h6" align="center" color="primary" className={classes.hi}>
           Hi, my name is
         </Typography>
-        <Typography variant="h2" color="textSecondary">
+        <Typography variant="h2" color="secondary">
           Kotomi Noguchi
         </Typography>
-        <Typography variant="h4" color="secondary" className={classes.title}>
+        <Typography variant="h4" color="textSecondary" className={classes.title}>
           Full Stack Software Engineer
         </Typography>
           <Typography color="primary" className={classes.desc}>

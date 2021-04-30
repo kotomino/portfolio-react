@@ -4,6 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import YouTubeIcon from '@material-ui/icons/YouTube';
 import LanguageIcon from '@material-ui/icons/Language';
+import FolderOpenIcon from '@material-ui/icons/FolderOpen';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { red } from '@material-ui/core/colors';
 import clsx from 'clsx';
@@ -12,11 +13,14 @@ import placeholder from '../assets/placeholder.jpeg';
 const styles = (theme) => ({
   root: {
     minWidth: 270,
+    minHeight: 560,
+    backgroundColor: "#404040",
   },
   media: {
     margin: 0,
     height: 0,
     paddingTop: '56.25%', // 16:9
+    textAlign: 'center'
   },
   expand: {
     transform: 'rotate(0deg)',
@@ -31,11 +35,15 @@ const styles = (theme) => ({
   avatar: {
     backgroundColor: red[500],
   },
+  title: {
+    color: '#FFFFFF',
+    textAlign: 'center'
+  }
 })
 
 const Project = (props) => {
 
-  const { classes } = props;
+  const { classes, name, description, languages, image } = props;
 
   const [expanded, setExpanded] = React.useState(false);
 
@@ -47,30 +55,34 @@ const Project = (props) => {
       <Grid item xs={4}>
         <Card container className={classes.root} elevation={10} >
           <CardHeader
+          classes={{
+            title: classes.title,
+          }}
           title={props.name}
         />
-        <CardMedia
-          className={classes.media}
-          style={{ width: 300, height: 300, paddingTop: '5%'}}
-          src={placeholder}
-          component="img"
-          title={props.name}
-        />
+        <div style={{ display:'flex', justifyContent:'center' }}>
+          <CardMedia
+            className={classes.media}
+            style={{ width: 300, height: 300, paddingTop: '5%'}}
+            src={placeholder}
+            component="img"
+            title={name}
+          />
+          </div>
         <CardContent>
-          <Typography variant="body2" color="textSecondary" component="p">
-            This impressive paella is a perfect party dish and a fun meal to cook together with your
-            guests. Add 1 cup of frozen peas along with the mussels, if you like.
+          <Typography variant="body2" component="p" color="primary">
+            {description}
           </Typography>
         </CardContent>
         <CardActions disableSpacing>
           <IconButton aria-label="github link">
-            <GitHubIcon />
+            <GitHubIcon color="primary"/>
           </IconButton>
           <IconButton aria-label="website">
-            <LanguageIcon />
+            <LanguageIcon color="primary"/>
           </IconButton>
           <IconButton aria-label="youtube">
-            <YouTubeIcon />
+            <YouTubeIcon color="primary"/>
           </IconButton>
           <IconButton
             className={clsx(classes.expand, {
@@ -86,20 +98,8 @@ const Project = (props) => {
         <Collapse in={expanded} timeout="auto" unmountOnExit>
           <CardContent>
             <Typography paragraph>Method:</Typography>
-            <Typography paragraph>
-              Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside for 10
-              minutes.
-            </Typography>
-            <Typography paragraph>
-              Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet over medium-high
-              heat. Add chicken, shrimp and chorizo, and cook, stirring occasionally until lightly
-              browned, 6 to 8 minutes. Transfer shrimp to a large plate and set aside, leaving chicken
-              and chorizo in the pan. Add pimentón, bay leaves, garlic, tomatoes, onion, salt and
-              pepper, and cook, stirring often until thickened and fragrant, about 10 minutes. Add
-              saffron broth and remaining 4 1/2 cups chicken broth; bring to a boil.
-            </Typography>
-            <Typography>
-              Set aside off of the heat to let rest for 10 minutes, and then serve.
+            <Typography color="primary" paragraph>
+              {languages}
             </Typography>
           </CardContent>
         </Collapse>

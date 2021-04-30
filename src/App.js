@@ -11,11 +11,11 @@ const theme = createMuiTheme({
       main: '#FFFFFF'
     },
     secondary: {
-      main: '#FACA67'
+      main: '#248f8f'
     },
     text: {
-      primary: "#C0C0C0",
-      secondary: '#22448B'
+      primary: "#3F3D56",
+      secondary: '#FACA67'
     },
   },
   typography: {
@@ -27,12 +27,17 @@ const theme = createMuiTheme({
     h4: {
       fontFamily: 'Montserrat',
       fontSize: "1.6rem",
+      fontWeight: 600
     },
     h6: {
       fontFamily: 'Montserrat',
       fontSize: "1rem",
       fontWeight: 600
-    }
+    },
+    body2: {
+      fontFamily: 'Inconsolata',
+      fontWeight: 600
+    },
   }
 })
 

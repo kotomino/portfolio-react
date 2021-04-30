@@ -9,7 +9,8 @@ const styles = (theme) => ({
     height: 120,
     alignItems: 'center',
     display: 'flex',
-    overflow: 'hidden'
+    overflow: 'hidden',
+    backgroundColor: theme.palette.grey.A400,
   }
 })
 

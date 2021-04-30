@@ -4,15 +4,17 @@ import { Container, Grid, Typography } from '@material-ui/core';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import Project from './Project';
+import projectData from '../data/ProjectData.js'
 
 const styles = (theme) => ({
   root: {
     display: 'flex',
     overflow: 'hidden',
+    backgroundColor: theme.palette.grey.A400,
   },
   container: {
-    marginTop: theme.spacing(15),
-    marginBottom: theme.spacing(15),
+    marginTop: theme.spacing(10),
+    marginBottom: theme.spacing(10),
     position: 'relative',
     display: 'flex',
     flexDirection: 'column',
@@ -27,14 +29,19 @@ const Projects = (props) => {
     Aos.init({ duration: 1000 });
   }, [])
 
-  const projects = ["Vacay Away", "Flappy Bernie", "Life Is Brewtiful", "PR Journal", "Ghibli CLI"].map((project, i) => <Project name={project}/>)
+  const projectsArray = projectData
+  console.log('projectsarray', projectsArray)
+  const projects = projectsArray.map((project, i) => <Project key={i} name={project.name} description={project.description} image={project.image} languages={project.languages} />)
+
+  console.log('projects', projects)
+  
 
   return (
     <section className={classes.root} id="projects">
       <Container className={classes.container} data-aos="fade-left">
-          <Grid container spacing={5} className={classes.grid}>
+          <Grid container spacing={5}>
             <Grid item xs={12}>
-              <Typography variant="h3" align="center">Projects</Typography>
+              <Typography variant="h4" align="center" color="secondary">Projects</Typography>
             </Grid>
             {projects}
           </Grid>

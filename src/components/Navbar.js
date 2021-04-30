@@ -38,29 +38,41 @@ const Navbar = () => {
               <Grid item s={2} md={7} />
               <Grid item s={2} md={1}>
                 <Link to="about" smooth={true} duration={600}>
-                  <Typography variant="body1" className={classes.navItem} color="textPrimary" display="inline">
+                  <Typography variant="body2" className={classes.navItem} color="secondary" display="inline">
+                    01.&nbsp; 
+                  </Typography>
+                  <Typography variant="body2" className={classes.navItem} color="primary" display="inline">
                     About
                   </Typography>
                 </Link>
               </Grid>
               <Grid item s={2} md={1}>
                 <Link to="projects" smooth={true} duration={1200}>
-                  <Typography variant="body1" className={classes.navItem} color="textPrimary" display="inline">
+                  <Typography variant="body2" className={classes.navItem} color="secondary" display="inline">
+                    02.&nbsp; 
+                  </Typography>
+                  <Typography variant="body2" className={classes.navItem} color="primary" display="inline">
                     Projects
                   </Typography>
                 </Link>
               </Grid>
               <Grid item s={2} md={1}>
                 <Link to="blogs" smooth={true} duration={1200}>
-                  <Typography variant="body1" className={classes.navItem} color="textPrimary" display="inline">
-                    Blogs
+                  <Typography variant="body2" className={classes.navItem} color="secondary" display="inline">
+                    03.&nbsp; 
+                  </Typography>
+                  <Typography variant="body2" className={classes.navItem} color="primary" display="inline">
+                    &nbsp;Blogs
                   </Typography>
                 </Link>
               </Grid>
               <Grid item s={2} md={1}>
                 <Link to="contact" smooth={true} duration={1400}>
-                  <Typography variant="body1" className={classes.navItem} color="textPrimary" display="inline">
-                    Contact
+                  <Typography variant="body2" className={classes.navItem} color="secondary" display="inline">
+                    04.&nbsp; 
+                  </Typography>
+                  <Typography variant="body2" className={classes.navItem} color="primary" display="inline">
+                   Contact
                   </Typography>
                 </Link>
               </Grid>

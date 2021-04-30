@@ -8,7 +8,7 @@ import 'aos/dist/aos.css';
 const styles = (theme) => ({
   root: {
     display: 'flex',
-    backgroundColor: theme.palette.primary.light,
+    backgroundColor: theme.palette.grey.A400,
     overflow: 'hidden',
   },
   container: {
@@ -33,6 +33,9 @@ const styles = (theme) => ({
     padding: 10,
     width: 500
   },
+  textField: {
+    color: '#FFFFFF'
+  }
 })
 
 const Contact = (props) => {
@@ -50,11 +53,11 @@ const Contact = (props) => {
         <Typography variant="h6" color="textSecondary" align="center">
           What's Next?
         </Typography>
-        <Typography variant="h3" color="textPrimary">
+        <Typography variant="h3" color="secondary">
           Get In Touch
         </Typography>
         <Grid item md={6}>
-          <Typography>
+          <Typography color="primary">
             My inbox is always open for new opportunities and connections. Whether you have a question or just want to say hello, I'll try my best to get back to you!
           </Typography>
         </Grid>
@@ -66,7 +69,10 @@ const Contact = (props) => {
                   label="Your Name"
                   name="name"
                   fullWidth
-                  variant="outlined"
+                  variant="filled" 
+                  InputProps={{
+                    className: classes.textField
+                  }}
                 />
                 <ValidationError 
                   prefix="Name" 
@@ -80,7 +86,10 @@ const Contact = (props) => {
                 label="Your Email"
                 name="email"
                 fullWidth
-                variant="outlined"
+                variant="filled"
+                InputProps={{
+                  className: classes.textField
+                }}
               />
               <ValidationError 
                 prefix="Email" 
@@ -91,12 +100,15 @@ const Contact = (props) => {
             <Grid item item xs={12}>
               <TextField
                 id="message"
-                variant="outlined"
+                variant="filled"
                 label="Your Message"
                 multiline
                 fullWidth
                 rows={8}
                 defaultValue="Type your message here..."
+                InputProps={{
+                  className: classes.textField
+                }}
               />
               <ValidationError 
                 prefix="Message" 
@@ -107,7 +119,7 @@ const Contact = (props) => {
             <Grid item item xs={12}>
               <Button 
                 type="submit" 
-                variant="contained" 
+                variant="outlined" 
                 color="secondary" 
                 // disabled={state.submitting}
                 >Submit

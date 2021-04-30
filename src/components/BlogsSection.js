@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { withStyles } from '@material-ui/core/styles';
-import { Container } from '@material-ui/core';
+import { Container, Grid, Typography } from '@material-ui/core';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 
@@ -8,6 +8,7 @@ const styles = (theme) => ({
   root: {
     display: 'flex',
     overflow: 'hidden',
+    backgroundColor: theme.palette.grey.A400,
   },
   container: {
     marginTop: theme.spacing(40),
@@ -35,7 +36,11 @@ const Blogs = (props) => {
   return (
     <section className={classes.root} id="blogs">
       <Container className={classes.container} data-aos="fade-right">
-        Blogs
+        <Grid container spacing={5}>
+          <Grid item xs={12}>
+            <Typography variant="h4" align="center" color="secondary">Blogs</Typography>
+          </Grid>
+        </Grid>
       </Container>
     </section>
   )
