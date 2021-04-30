@@ -1,9 +1,9 @@
 import React from 'react'
 import { Avatar, Card, CardActions, CardContent, CardHeader, CardMedia, Collapse, Grid, IconButton, Typography } from '@material-ui/core'
 import { withStyles } from '@material-ui/core/styles';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShareIcon from '@material-ui/icons/Share';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import YouTubeIcon from '@material-ui/icons/YouTube';
+import LanguageIcon from '@material-ui/icons/Language';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { red } from '@material-ui/core/colors';
 import clsx from 'clsx';
@@ -44,7 +44,7 @@ const Project = (props) => {
   };
 
   return (
-      <Grid item xs={6}>
+      <Grid item xs={4}>
         <Card container className={classes.root} elevation={10} >
           <CardHeader
           title={props.name}
@@ -63,11 +63,14 @@ const Project = (props) => {
           </Typography>
         </CardContent>
         <CardActions disableSpacing>
-          <IconButton aria-label="add to favorites">
-            <FavoriteIcon />
+          <IconButton aria-label="github link">
+            <GitHubIcon />
           </IconButton>
-          <IconButton aria-label="share">
-            <ShareIcon />
+          <IconButton aria-label="website">
+            <LanguageIcon />
+          </IconButton>
+          <IconButton aria-label="youtube">
+            <YouTubeIcon />
           </IconButton>
           <IconButton
             className={clsx(classes.expand, {

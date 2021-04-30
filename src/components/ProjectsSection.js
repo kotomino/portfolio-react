@@ -32,7 +32,7 @@ const Projects = (props) => {
   return (
     <section className={classes.root} id="projects">
       <Container className={classes.container} data-aos="fade-left">
-          <Grid container spacing={7} className={classes.grid}>
+          <Grid container spacing={5} className={classes.grid}>
             <Grid item xs={12}>
               <Typography variant="h3" align="center">Projects</Typography>
             </Grid>
