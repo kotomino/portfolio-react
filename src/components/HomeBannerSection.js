@@ -10,7 +10,7 @@ const styles = (theme) => ({
     overflow: 'hidden',
   },
   container: {
-    marginTop: theme.spacing(30),
+    marginTop: theme.spacing(25),
     marginBottom: theme.spacing(15),
     position: 'relative',
     display: 'flex',
@@ -28,7 +28,8 @@ const styles = (theme) => ({
     marginLeft: theme.spacing(0),
   },
   hi: {
-    marginLeft: -465
+    marginLeft: -465, 
+    color: theme.palette.common.white
   }
 })
 
@@ -41,7 +42,7 @@ const HomeBanner = (props) => {
       <Container className={classes.container}>
         <Grid container>
       <Grid item lg={6}>
-        <Typography variant="h6" align="center" color="primary" className={classes.hi}>
+        <Typography variant="h6" align="center" className={classes.hi}>
           Hi, my name is
         </Typography>
         <Typography variant="h2" color="secondary">
