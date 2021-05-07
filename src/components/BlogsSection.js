@@ -38,7 +38,12 @@ const Blogs = (props) => {
       <Container className={classes.container} data-aos="fade-right">
         <Grid container spacing={5}>
           <Grid item xs={12}>
-            <Typography variant="h4" align="center" color="secondary">Blogs</Typography>
+            <Typography variant="h3" align="center" color="secondary">Blogs</Typography>
+          </Grid>
+          <Grid item xs={12}>
+            <Typography variant="h4" align="center" color="primary">
+              Explore 
+            </Typography>
           </Grid>
         </Grid>
       </Container>
