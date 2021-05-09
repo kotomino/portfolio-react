@@ -6,8 +6,8 @@ const styles = (theme) => ({
     display: 'flex',
     // backgroundColor: theme.palette.primary.light,
     overflow: 'hidden', 
-    width: 600,
-    height: 450,
+    width: 650,
+    height: 480,
     marginTop: 150,
     marginLeft: 50
   },
