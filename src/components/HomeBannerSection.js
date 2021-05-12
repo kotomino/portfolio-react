@@ -22,7 +22,8 @@ const styles = (theme) => ({
   },
   button: {
     marginTop: 150,
-    marginLeft: 200
+    marginLeft: 200,
+    color: theme.palette.common.white
   },
   title: {
     marginLeft: theme.spacing(0),

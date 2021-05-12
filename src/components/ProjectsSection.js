@@ -20,6 +20,9 @@ const styles = (theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
   },
+  white: {
+    color: theme.palette.common.white
+  }
 })
 
 const Projects = (props) => {
@@ -40,8 +43,15 @@ const Projects = (props) => {
     <section className={classes.root} id="projects">
       <Container className={classes.container} data-aos="fade-left">
           <Grid container spacing={5}>
-            <Grid item xs={12}>
-              <Typography variant="h4" align="center" color="secondary">Projects</Typography>
+            <Grid item xs={12} align="center">
+              <div className={classes.project} >
+                <Typography variant="h4" color="secondary" display="inline">
+                  02.{' '} 
+                </Typography>
+                <Typography variant="h4" className={classes.white} display="inline">
+                  Projects
+                </Typography>
+              </div>
             </Grid>
             {projects}
           </Grid>
