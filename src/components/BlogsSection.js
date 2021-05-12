@@ -42,7 +42,7 @@ const Blogs = (props) => {
           </Grid>
           <Grid item xs={12}>
             <Typography variant="h4" align="center" color="primary">
-              Explore 
+              Explore My Projects
             </Typography>
           </Grid>
         </Grid>
