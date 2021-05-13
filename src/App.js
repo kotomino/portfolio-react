@@ -33,6 +33,11 @@ const theme = createMuiTheme({
       fontSize: "1.6rem",
       fontWeight: 600
     },
+    h5: {
+      fontFamily: 'Inconsolata',
+      fontWeight: 600,
+      fontSize: "1.3rem"
+    },
     h6: {
       fontFamily: 'Montserrat',
       fontSize: "1rem",
