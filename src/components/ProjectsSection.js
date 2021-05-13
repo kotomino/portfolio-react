@@ -22,6 +22,9 @@ const styles = (theme) => ({
   },
   white: {
     color: theme.palette.common.white
+  },
+  projects: {
+    marginRight: '8%'
   }
 })
 
@@ -43,12 +46,12 @@ const Projects = (props) => {
     <section className={classes.root} id="projects">
       <Container className={classes.container} data-aos="fade-left">
           <Grid container spacing={5}>
-            <Grid item xs={12} align="center">
-              <div className={classes.project} >
-                <Typography variant="h4" color="secondary" display="inline">
-                  02.{' '} 
+            <Grid item xs={12} align="right">
+              <div className={classes.projects} >
+                <Typography variant="h5" color="secondary" display="inline">
+                  03.{' '} 
                 </Typography>
-                <Typography variant="h4" className={classes.white} display="inline">
+                <Typography variant="h5" className={classes.white} display="inline">
                   Projects
                 </Typography>
               </div>

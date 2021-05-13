@@ -1,5 +1,5 @@
 import React from 'react'
-import { Avatar, Card, CardActions, CardContent, CardHeader, CardMedia, Collapse, Grid, IconButton, Typography } from '@material-ui/core'
+import { Card, CardActions, CardContent, CardHeader, CardMedia, Collapse, Grid, IconButton, Typography } from '@material-ui/core'
 import { withStyles } from '@material-ui/core/styles';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import YouTubeIcon from '@material-ui/icons/YouTube';
@@ -7,18 +7,18 @@ import LanguageIcon from '@material-ui/icons/Language';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { red } from '@material-ui/core/colors';
 import clsx from 'clsx';
-import placeholder from '../assets/placeholder.jpeg';
 
 const styles = (theme) => ({
   root: {
     minWidth: 270,
-    minHeight: 560,
+    minHeight: 540,
     backgroundColor: "#33334d",
   },
   media: {
     margin: 0,
-    height: 0,
-    paddingTop: '56.25%', // 16:9
+    height: "80%",
+    width: "80%",
+    paddingTop: '2%', // 16:9
     textAlign: 'center'
   },
   expand: {
@@ -44,6 +44,10 @@ const styles = (theme) => ({
       cursor: 'pointer'
    }
   },
+  description: {
+    marginLeft: '5%',
+    marginRight: '5%'
+  }
 })
 
 const Project = (props) => {
@@ -57,7 +61,7 @@ const Project = (props) => {
   };
 
   return (
-      <Grid item xs={4}>
+      <Grid item xs={12} md={6} lg={4}>
         <Card container className={classes.root} elevation={10} >
           <CardHeader
           classes={{
@@ -68,13 +72,13 @@ const Project = (props) => {
         <div style={{ display:'flex', justifyContent:'center' }}>
           <CardMedia
             className={classes.media}
-            style={{ width: 300, height: 300, paddingTop: '5%'}}
-            src={placeholder}
+            // style={{ width: 550, height: 400, paddingTop: '5%'}}
+            src={image}
             component="img"
             title={name}
           />
           </div>
-        <CardContent>
+        <CardContent className={classes.description}>
           <Typography variant="body2" component="p" color="primary">
             {description}
           </Typography>
