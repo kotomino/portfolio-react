@@ -50,10 +50,10 @@ const AboutMe = (props) => {
           </Grid>
           <Grid item md={5} align="center">
             <div className={classes.aboutMe} >
-              <Typography variant="h4" color="secondary" display="inline">
+              <Typography variant="h5" color="secondary" display="inline">
                 01.{' '} 
               </Typography>
-              <Typography variant="h4" className={classes.white} display="inline">
+              <Typography variant="h5" className={classes.white} display="inline">
                 About Me
               </Typography>
             </div>

@@ -18,19 +18,27 @@ const styles = (theme) => ({
     alignItems: 'center',
   },
   desc: {
-    marginTop: 30
+    marginTop: 30,
+    marginLeft: "1%",
+    marginRight: "1%"
   },
   button: {
-    marginTop: 150,
-    marginLeft: 200,
+    marginTop: "15%",
+    marginLeft: "38%",
     color: theme.palette.common.white
   },
   title: {
-    marginLeft: theme.spacing(0),
+    marginLeft: "1%",
   },
   hi: {
-    marginLeft: -465, 
+    marginLeft: "-75%", 
     color: theme.palette.common.white
+  },
+  image: {
+    width: "70%"
+  },
+  text: {
+    marginLeft: "1%"
   }
 })
 
@@ -42,11 +50,11 @@ const HomeBanner = (props) => {
     <section className={classes.root}>
       <Container className={classes.container}>
         <Grid container>
-      <Grid item lg={6}>
+      <Grid item md={6} xs={12} >
         <Typography variant="h6" align="center" className={classes.hi}>
           Hi, my name is
         </Typography>
-        <Typography variant="h2" color="secondary">
+        <Typography variant="h2" color="secondary" className={classes.text}>
           Kotomi Noguchi
         </Typography>
         <Typography variant="h4" color="textSecondary" className={classes.title}>
@@ -56,10 +64,10 @@ const HomeBanner = (props) => {
             I'm an Atlanta-based software engineer with a passion for making positive impact through technology. 
           </Typography>
           <Button variant="outlined" color="primary" className={classes.button} href="mailto:kotomi.noguchi@gmail.com">
-          Get In Touch
-        </Button>
+            Get In Touch
+          </Button>
         </Grid>
-        <Grid item lg={6} sm={3}>
+        <Grid item md={6} xs={12} className={classes.image}>
           <GirlImage />
         </Grid>
         </Grid>

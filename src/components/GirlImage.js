@@ -6,10 +6,10 @@ const styles = (theme) => ({
     display: 'flex',
     // backgroundColor: theme.palette.primary.light,
     overflow: 'hidden', 
-    width: 650,
-    height: 480,
-    marginTop: 150,
-    marginLeft: 50
+    width: "90%",
+    height: "90%",
+    marginTop: "27%",
+    marginLeft: "7%"
   },
 })
 

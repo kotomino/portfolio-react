@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import Slider from './Slider';
 import { withStyles } from '@material-ui/core/styles';
-import { Container, Grid, Typography } from '@material-ui/core';
+import { Button, Container, Grid, Typography } from '@material-ui/core';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import Typical from 'react-typical';
@@ -27,11 +27,20 @@ const styles = (theme) => ({
     opacity: 1,
   },
   text: {
-    marginTop: 200
+    marginTop: 150,
+    marginLeft: '10%'
   },
   white: {
     color: theme.palette.common.white
-  }
+  },
+  blogs: {
+    marginLeft: '8%'
+  },
+  button: {
+    marginTop: 70,
+    marginLeft: "40%",
+    color: theme.palette.common.white
+  },
 })
 
 const Blogs = (props) => {
@@ -45,20 +54,20 @@ const Blogs = (props) => {
     <section className={classes.root} id="blogs">
       <Container className={classes.container} data-aos="fade-right">
         <Grid container spacing={5}>
-          <Grid item xs={12} align="center">
-            <div className={classes.project} >
-              <Typography variant="h4" color="secondary" display="inline">
-                03.{' '} 
+          <Grid item xs={12} align="left">
+            <div className={classes.blogs} >
+              <Typography variant="h5" color="secondary" display="inline">
+                02.{' '} 
               </Typography>
-              <Typography variant="h4" className={classes.white} display="inline">
+              <Typography variant="h5" className={classes.white} display="inline">
                 Blogs
               </Typography>
             </div>
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={12} md={6}>
             <Slider />
           </Grid>
-          <Grid item xs={6} >
+          <Grid item xs={12} md={6}>
             <div className={classes.text}>
               <Typography variant="h3" align="center" color="textSecondary" display="inline">
                 Explore{' '} 
@@ -80,6 +89,12 @@ const Blogs = (props) => {
                   />
               </Typography>
             </div>
+            <Button variant="outlined" color="primary" className={classes.button} href="https://kotomi-noguchi.medium.com/">
+              View Blogs
+            </Button>
+          </Grid>
+          <Grid item>
+            
           </Grid>
         </Grid>
       </Container>

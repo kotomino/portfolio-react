@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   button: {
     '&:hover': {
       color: 'white',
-   }
+   },
   },
   white: {
     color: theme.palette.common.white
@@ -53,22 +53,10 @@ const Navbar = () => {
                 
               </Grid>
               <Grid item s={2} md={1}>
-                <Link to="projects" smooth={true} duration={1200} className={classes.navItem}>
-                  <div className={classes.navItem}>
-                    <Typography variant="body2" color="secondary" display="inline">
-                      02.{' '}
-                    </Typography>
-                    <Typography variant="body2" className={classes.white} display="inline">
-                      Projects
-                    </Typography>
-                  </div>
-                </Link>
-              </Grid>
-              <Grid item s={2} md={1}>
                 <Link to="blogs" smooth={true} duration={1200}>
                   <div className={classes.navItem}>
                     <Typography variant="body2" color="secondary" display="inline">
-                      03.{' '}
+                      02.{' '}
                     </Typography>
                     <Typography variant="body2" className={classes.white} color="primary" display="inline">
                       &nbsp;Blogs
@@ -76,6 +64,19 @@ const Navbar = () => {
                   </div>
                 </Link>
               </Grid>
+              <Grid item s={2} md={1}>
+                <Link to="projects" smooth={true} duration={1200} className={classes.navItem}>
+                  <div className={classes.navItem}>
+                    <Typography variant="body2" color="secondary" display="inline">
+                      03.{' '}
+                    </Typography>
+                    <Typography variant="body2" className={classes.white} display="inline">
+                      Projects
+                    </Typography>
+                  </div>
+                </Link>
+              </Grid>
+              
               <Grid item s={2} md={1}>
                 <Link to="contact" smooth={true} duration={1400}>
                   <div className={classes.navItem}>

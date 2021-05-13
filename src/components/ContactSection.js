@@ -35,7 +35,7 @@ const styles = (theme) => ({
   },
   textField: {
     color: '#FFFFFF'
-  }
+  },
 })
 
 const Contact = (props) => {
@@ -56,7 +56,7 @@ const Contact = (props) => {
         <Typography variant="h3" color="secondary">
           Get In Touch
         </Typography>
-        <Grid item md={6}>
+        <Grid item md={5} sm={7} xs={11}>
           <Typography color="primary">
             My inbox is always open for new opportunities and connections. Whether you have a question or just want to say hello, I'll try my best to get back to you!
           </Typography>
