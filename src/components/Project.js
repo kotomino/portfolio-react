@@ -4,7 +4,6 @@ import { withStyles } from '@material-ui/core/styles';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import YouTubeIcon from '@material-ui/icons/YouTube';
 import LanguageIcon from '@material-ui/icons/Language';
-import FolderOpenIcon from '@material-ui/icons/FolderOpen';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { red } from '@material-ui/core/colors';
 import clsx from 'clsx';
@@ -38,7 +37,13 @@ const styles = (theme) => ({
   title: {
     color: '#FFFFFF',
     textAlign: 'center'
-  }
+  },
+  hover: {
+    '&:hover': {
+      color: 'white',
+      cursor: 'pointer'
+   }
+  },
 })
 
 const Project = (props) => {
@@ -76,13 +81,13 @@ const Project = (props) => {
         </CardContent>
         <CardActions disableSpacing>
           <IconButton aria-label="github link">
-            <GitHubIcon color="primary"/>
+            <GitHubIcon color="primary" className={classes.hover} />
           </IconButton>
           <IconButton aria-label="website">
-            <LanguageIcon color="primary"/>
+            <LanguageIcon color="primary" className={classes.hover} />
           </IconButton>
           <IconButton aria-label="youtube">
-            <YouTubeIcon color="primary"/>
+            <YouTubeIcon color="primary" className={classes.hover} />
           </IconButton>
           <IconButton
             className={clsx(classes.expand, {
