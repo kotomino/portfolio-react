@@ -14,14 +14,17 @@ const useStyles = makeStyles((theme) => ({
   },
   navItem: {
     '&:hover': {
-      color: 'white',
+      color: 'black',
       cursor: 'pointer'
-   }
+   },
   },
   button: {
     '&:hover': {
       color: 'white',
    }
+  },
+  white: {
+    color: theme.palette.common.white
   }
 }));
 
@@ -38,42 +41,51 @@ const Navbar = () => {
               <Grid item s={2} md={7} />
               <Grid item s={2} md={1}>
                 <Link to="about" smooth={true} duration={600}>
-                  <Typography variant="body2" className={classes.navItem} color="secondary" display="inline">
-                    01.&nbsp; 
-                  </Typography>
-                  <Typography variant="body2" className={classes.navItem} color="primary" display="inline">
-                    About
-                  </Typography>
+                  <div className={classes.navItem}>
+                    <Typography variant="body2" color="secondary" display="inline" >
+                      01.{' '}
+                    </Typography>
+                    <Typography variant="body2" className={classes.white} color="primary" display="inline">
+                      About
+                    </Typography>
+                    </div>
                 </Link>
+                
               </Grid>
               <Grid item s={2} md={1}>
-                <Link to="projects" smooth={true} duration={1200}>
-                  <Typography variant="body2" className={classes.navItem} color="secondary" display="inline">
-                    02.&nbsp; 
-                  </Typography>
-                  <Typography variant="body2" className={classes.navItem} color="primary" display="inline">
-                    Projects
-                  </Typography>
+                <Link to="projects" smooth={true} duration={1200} className={classes.navItem}>
+                  <div className={classes.navItem}>
+                    <Typography variant="body2" color="secondary" display="inline">
+                      02.{' '}
+                    </Typography>
+                    <Typography variant="body2" className={classes.white} display="inline">
+                      Projects
+                    </Typography>
+                  </div>
                 </Link>
               </Grid>
               <Grid item s={2} md={1}>
                 <Link to="blogs" smooth={true} duration={1200}>
-                  <Typography variant="body2" className={classes.navItem} color="secondary" display="inline">
-                    03.&nbsp; 
-                  </Typography>
-                  <Typography variant="body2" className={classes.navItem} color="primary" display="inline">
-                    &nbsp;Blogs
-                  </Typography>
+                  <div className={classes.navItem}>
+                    <Typography variant="body2" color="secondary" display="inline">
+                      03.{' '}
+                    </Typography>
+                    <Typography variant="body2" className={classes.white} color="primary" display="inline">
+                      &nbsp;Blogs
+                    </Typography>
+                  </div>
                 </Link>
               </Grid>
               <Grid item s={2} md={1}>
                 <Link to="contact" smooth={true} duration={1400}>
-                  <Typography variant="body2" className={classes.navItem} color="secondary" display="inline">
-                    04.&nbsp; 
-                  </Typography>
-                  <Typography variant="body2" className={classes.navItem} color="primary" display="inline">
-                   Contact
-                  </Typography>
+                  <div className={classes.navItem}>
+                    <Typography variant="body2" color="secondary" display="inline">
+                      04.{' '}
+                    </Typography>
+                    <Typography variant="body2" className={classes.white} color="primary" display="inline">
+                    Contact
+                    </Typography>
+                  </div>
                 </Link>
               </Grid>
               <Grid item s={2} md={1}>
