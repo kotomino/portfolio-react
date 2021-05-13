@@ -1,6 +1,5 @@
 import React from 'react'
 import sliderImage from './sliderImage';
-import placeholder from '../assets/placeholder.jpeg';
 
 function SliderContent(props) {
   return (
