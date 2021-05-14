@@ -14,7 +14,7 @@ const styles = (theme) => ({
   },
   container: {
     marginTop: theme.spacing(20),
-    marginBottom: theme.spacing(40),
+    marginBottom: theme.spacing(30),
     position: 'relative',
     display: 'flex',
     flexDirection: 'column',
@@ -28,17 +28,17 @@ const styles = (theme) => ({
   },
   text: {
     marginTop: 150,
-    marginLeft: '10%'
+    marginLeft: '0%'
   },
   white: {
     color: theme.palette.common.white
   },
   blogs: {
-    marginLeft: '8%'
+    marginLeft: '15%'
   },
   button: {
     marginTop: 70,
-    marginLeft: "40%",
+    marginLeft: "32%",
     color: theme.palette.common.white
   },
 })
@@ -52,7 +52,7 @@ const Blogs = (props) => {
 
   return (
     <section className={classes.root} id="blogs">
-      <Container className={classes.container} data-aos="fade-right">
+      <Container className={classes.container} data-aos="fade-left">
         <Grid container spacing={5}>
           <Grid item xs={12} align="left">
             <div className={classes.blogs} >
@@ -78,13 +78,13 @@ const Blogs = (props) => {
                   wrapper="b"
                   steps={[
                     'My Projects',
-                    1000,
-                    'Code',
-                    1000,
-                    'My Story',
-                    1000,
+                    1500,
                     'Bootcamp Life',
-                    1000
+                    1500,
+                    'My Story',
+                    1500,
+                    'My Code',
+                    1500
                   ]}
                   />
               </Typography>
