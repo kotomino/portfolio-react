@@ -15,11 +15,21 @@ code {
     monospace;
 }
 
-#stars {
-  animation: stars 1s linear infinite;
+#stars1 {
+  animation: stars1 1s linear infinite;
 }
 
-@keyframes stars {
+@keyframes stars1 {
+  50% {
+    opacity: 0;
+  }
+}
+
+#stars2 {
+  animation: stars1 1.3s linear infinite;
+}
+
+@keyframes stars2 {
   50% {
     opacity: 0;
   }
