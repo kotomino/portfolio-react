@@ -26,7 +26,7 @@ const projects = [
   {
     name: "Portfolio v1",
     description: "Portfolio site you are currently on.",
-    image: "...",
+    image: "https://s3.gifyu.com/images/prjournal.gif",
     languages: ["React", "Material UI"]
   }
 ]
