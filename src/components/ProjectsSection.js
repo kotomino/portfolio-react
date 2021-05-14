@@ -44,7 +44,7 @@ const Projects = (props) => {
 
   return (
     <section className={classes.root} id="projects">
-      <Container className={classes.container} data-aos="fade-left">
+      <Container className={classes.container} data-aos="fade-right">
           <Grid container spacing={5}>
             <Grid item xs={12} align="right">
               <div className={classes.projects} >
