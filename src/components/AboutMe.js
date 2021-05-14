@@ -13,21 +13,27 @@ const styles = (theme) => ({
   },
   container: {
     marginTop: theme.spacing(20),
-    marginBottom: theme.spacing(30),
+    marginBottom: theme.spacing(20),
     position: 'relative',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
   },
-  desc: {
-    marginTop: 10
-  },
   aboutMe: {
-    marginTop: 50
+    marginTop: 30,
+    marginBottom: 30
   },
   white: {
     color: theme.palette.common.white
-  }
+  },
+  image: {
+    height: '100%',
+    width: '100%'
+  },
+  desc: {
+    marginTop: 20
+  },
+
 })
 
 const AboutMe = (props) => {
@@ -48,17 +54,95 @@ const AboutMe = (props) => {
               alt="blue"
             />
           </Grid>
-          <Grid item md={5} align="center">
+          <Grid item md={6} align="center">
             <div className={classes.aboutMe} >
               <Typography variant="h5" color="secondary" display="inline">
-                01.{' '} 
+                01.{' '}
               </Typography>
               <Typography variant="h5" className={classes.white} display="inline">
                 About Me
               </Typography>
             </div>
-            <Typography className={classes.desc} color="primary">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <Grid container >
+            <Grid item md={12} align="left" >
+              <Typography color="primary" align="left" display="inline">
+                Hello! My name is Kotomi and I enjoy developing things on the web. My time as a{' '} 
+              </Typography>
+              <Typography color="textSecondary" align="left" display="inline">
+                Technical Account Manager in e-commerce{' '}
+              </Typography>
+              <Typography color="primary" align="left" display="inline">
+              heightened my interest in programming; while witnessing developers magically creating features and resolving bugs I became determined to be a part of that magic!
+              </Typography>
+              </Grid>
+            </Grid>
+            <Typography color="primary" align="left" className={classes.desc}>
+              Here are some of the technologies I've been working with recently:
+            </Typography>
+            <br/>
+            <Grid container>
+              <Grid item item xs={4} align="left">
+                <Typography color="secondary" display="inline" variant="body2">
+                  &#8227;{' '}
+                </Typography>
+                <Typography color="primary" display="inline" variant="body2">
+                  JavaScript (ES6+) 
+                </Typography>
+                <br/>
+                <Typography color="secondary" display="inline" variant="body2">
+                  &#8227;{' '}
+                </Typography>
+                <Typography color="primary" display="inline" variant="body2">
+                  React 
+                </Typography>
+                <br/>
+                <Typography color="secondary" display="inline" variant="body2">
+                  &#8227;{' '}
+                </Typography>
+                <Typography color="primary" display="inline" variant="body2">
+                  Redux
+                </Typography>
+                <br/>
+                <Typography color="secondary" display="inline" variant="body2">
+                  &#8227;{' '}
+                </Typography>
+                <Typography color="primary" display="inline" variant="body2">
+                  Node.js 
+                </Typography>
+              </Grid>
+              <Grid item xs={5} align="left">
+                <Typography color="secondary" display="inline" variant="body2">
+                  &#8227;{' '}
+                </Typography>
+                <Typography color="primary" display="inline" variant="body2">
+                  Ruby on Rails 
+                </Typography>
+                <br/>
+                <Typography color="secondary" display="inline" variant="body2">
+                  &#8227;{' '}
+                </Typography>
+                <Typography color="primary" display="inline" variant="body2">
+                  HTML/CSS
+                </Typography>
+                <br/>
+                <Typography color="secondary" display="inline" variant="body2">
+                  &#8227;{' '}
+                </Typography>
+                <Typography color="primary" display="inline" variant="body2">
+                  Material UI 
+                </Typography>
+                <br/> 
+                <Typography color="secondary" display="inline" variant="body2">
+                  &#8227;{' '}
+                </Typography>
+                <Typography color="primary" display="inline" variant="body2">
+                  Bootstrap
+                </Typography>
+              </Grid>
+            </Grid>
+            <br/>
+            <Typography color="primary" align="left" >
+              When not coding you can find me rock climbing, watching anime, or 
             </Typography>
           </Grid>
         </Grid>
