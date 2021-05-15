@@ -34,7 +34,7 @@ const styles = (theme) => ({
     width: 500
   },
   textField: {
-    color: '#C8C8C8'
+    color: '#b3b3cc'
   },
   white: {
     color: "#e0e0eb"
