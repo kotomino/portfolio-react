@@ -34,8 +34,17 @@ const styles = (theme) => ({
     width: 500
   },
   textField: {
-    color: '#FFFFFF'
+    color: '#C8C8C8'
   },
+  white: {
+    color: "#e0e0eb"
+  },
+  button: {
+    color: 'white',
+    '&:hover': {
+      color: '#248f8f',
+    }
+  }
 })
 
 const Contact = (props) => {
@@ -50,15 +59,20 @@ const Contact = (props) => {
   return (
     <section className={classes.root} id="contact">
       <Container className={classes.container} data-aos="fade-left">
-        <Typography variant="h6" color="textSecondary" align="center">
-          What's Next?
-        </Typography>
-        <Typography variant="h3" color="secondary">
+        <div className={classes.blogs} >
+          <Typography variant="h5" color="secondary" display="inline">
+            04.{' '} 
+          </Typography>
+          <Typography variant="h5" className={classes.white} display="inline">
+            What's Next?
+          </Typography>
+        </div>
+        <Typography variant="h3" color="textSecondary">
           Get In Touch
         </Typography>
         <Grid item md={5} sm={7} xs={11}>
           <Typography color="primary">
-            My inbox is always open for new opportunities and connections. Whether you have a question or just want to say hello, I'll try my best to get back to you!
+            My inbox is always open for new opportunities and connections. Feel free to reach out any time!
           </Typography>
         </Grid>
         <form className={classes.form} onSubmit={handleSubmit}>
@@ -121,7 +135,7 @@ const Contact = (props) => {
                 type="submit" 
                 variant="outlined" 
                 color="secondary" 
-                // disabled={state.submitting}
+                className={classes.button}
                 >Submit
               </Button>
             </Grid>

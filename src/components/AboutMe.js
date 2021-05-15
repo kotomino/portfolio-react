@@ -24,11 +24,11 @@ const styles = (theme) => ({
     marginBottom: 30
   },
   white: {
-    color: theme.palette.common.white
+    color: "#e0e0eb"
   },
   image: {
-    height: '100%',
-    width: '100%'
+    height: '95%',
+    width: '95%'
   },
   desc: {
     marginTop: 20

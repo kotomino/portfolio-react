@@ -21,7 +21,7 @@ const styles = (theme) => ({
     alignItems: 'center',
   },
   white: {
-    color: theme.palette.common.white
+    color: "#e0e0eb"
   },
   projects: {
     marginRight: '8%'
@@ -37,7 +37,7 @@ const Projects = (props) => {
 
   const projectsArray = projectData
   console.log('projectsarray', projectsArray)
-  const projects = projectsArray.map((project, i) => <Project key={i} name={project.name} description={project.description} image={project.image} languages={project.languages} />)
+  const projects = projectsArray.map((project, i) => <Project key={i} name={project.name} description={project.description} image={project.image} languages={project.languages} github={project.github} youtube={project.youtube} website={project.website} />)
 
   console.log('projects', projects)
   

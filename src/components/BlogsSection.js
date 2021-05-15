@@ -31,7 +31,10 @@ const styles = (theme) => ({
     marginLeft: '0%'
   },
   white: {
-    color: theme.palette.common.white
+    color: "#e0e0eb"
+  },
+  purple: {
+    color: "#b3b3cc"
   },
   blogs: {
     marginLeft: '15%'
@@ -39,7 +42,10 @@ const styles = (theme) => ({
   button: {
     marginTop: 70,
     marginLeft: "32%",
-    color: theme.palette.common.white
+    color: 'white',
+    '&:hover': {
+      color: '#248f8f',
+   },
   },
 })
 
@@ -72,7 +78,7 @@ const Blogs = (props) => {
               <Typography variant="h3" align="center" color="textSecondary" display="inline">
                 Explore{' '} 
               </Typography>
-              <Typography variant="h3" color="primary" display="inline">
+              <Typography variant="h3" className={classes.purple} display="inline">
                 <Typical
                   loop={Infinity}
                   wrapper="b"
@@ -89,7 +95,7 @@ const Blogs = (props) => {
                   />
               </Typography>
             </div>
-            <Button variant="outlined" color="primary" className={classes.button} href="https://kotomi-noguchi.medium.com/">
+            <Button variant="outlined" color="secondary" className={classes.button} target='_blank' href="https://kotomi-noguchi.medium.com/">
               View Blogs
             </Button>
           </Grid>

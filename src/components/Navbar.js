@@ -13,19 +13,18 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: fade("#F0FFFF", 0),
   },
   navItem: {
+    color: "#e0e0eb",
     '&:hover': {
-      color: 'black',
+      color: '#248f8f',
       cursor: 'pointer'
    },
   },
   button: {
+    color: 'white',
     '&:hover': {
-      color: 'white',
+      color: '#248f8f',
    },
   },
-  white: {
-    color: theme.palette.common.white
-  }
 }));
 
 const Navbar = () => {
@@ -45,7 +44,7 @@ const Navbar = () => {
                     <Typography variant="body2" color="secondary" display="inline" >
                       01.{' '}
                     </Typography>
-                    <Typography variant="body2" className={classes.white} color="primary" display="inline">
+                    <Typography variant="body2" className={classes.navItem} color="primary" display="inline">
                       About
                     </Typography>
                     </div>
@@ -54,11 +53,11 @@ const Navbar = () => {
               </Grid>
               <Grid item s={2} md={1}>
                 <Link to="blogs" smooth={true} duration={1200}>
-                  <div className={classes.navItem}>
+                <div className={classes.navItem}>
                     <Typography variant="body2" color="secondary" display="inline">
                       02.{' '}
                     </Typography>
-                    <Typography variant="body2" className={classes.white} color="primary" display="inline">
+                    <Typography variant="body2" className={classes.navItem} color="primary" display="inline">
                       &nbsp;Blogs
                     </Typography>
                   </div>
@@ -70,7 +69,7 @@ const Navbar = () => {
                     <Typography variant="body2" color="secondary" display="inline">
                       03.{' '}
                     </Typography>
-                    <Typography variant="body2" className={classes.white} display="inline">
+                    <Typography variant="body2" className={classes.navItem} display="inline">
                       Projects
                     </Typography>
                   </div>
@@ -83,7 +82,7 @@ const Navbar = () => {
                     <Typography variant="body2" color="secondary" display="inline">
                       04.{' '}
                     </Typography>
-                    <Typography variant="body2" className={classes.white} color="primary" display="inline">
+                    <Typography variant="body2" className={classes.navItem} color="primary" display="inline">
                     Contact
                     </Typography>
                   </div>

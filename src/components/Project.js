@@ -10,8 +10,7 @@ import clsx from 'clsx';
 
 const styles = (theme) => ({
   root: {
-    minWidth: 270,
-    minHeight: 540,
+    // minHeight: 430,
     backgroundColor: "#33334d",
   },
   media: {
@@ -21,22 +20,12 @@ const styles = (theme) => ({
     paddingTop: '2%', // 16:9
     textAlign: 'center'
   },
-  expand: {
-    transform: 'rotate(0deg)',
-    marginLeft: 'auto',
-    transition: theme.transitions.create('transform', {
-      duration: theme.transitions.duration.shortest,
-    }),
-  },
-  expandOpen: {
-    transform: 'rotate(180deg)',
-  },
   avatar: {
     backgroundColor: red[500],
   },
   title: {
-    color: '#FFFFFF',
-    textAlign: 'center'
+    color: '#e0e0eb',
+    textAlign: 'center',
   },
   hover: {
     '&:hover': {
@@ -46,13 +35,20 @@ const styles = (theme) => ({
   },
   description: {
     marginLeft: '5%',
-    marginRight: '5%'
+    marginRight: '5%',
+  },
+  desc : {
+    fontSize: "0.95rem",
+    color: "#d1d1e0"
+  },
+  languages: {
+    color: "#a3a3c2",
   }
 })
 
 const Project = (props) => {
 
-  const { classes, name, description, languages, image } = props;
+  const { classes, name, description, languages, image, github, website, youtube } = props;
 
   const [expanded, setExpanded] = React.useState(false);
 
@@ -79,39 +75,40 @@ const Project = (props) => {
           />
           </div>
         <CardContent className={classes.description}>
-          <Typography variant="body2" component="p" color="primary">
+          <Typography variant="body1" className={classes.desc} component="p" color="primary">
             {description}
           </Typography>
         </CardContent>
+        {/* { height < 500 ? <br/> : <></>} */}
         <CardActions disableSpacing>
-          <IconButton aria-label="github link">
-            <GitHubIcon color="primary" className={classes.hover} />
-          </IconButton>
-          <IconButton aria-label="website">
-            <LanguageIcon color="primary" className={classes.hover} />
-          </IconButton>
-          <IconButton aria-label="youtube">
-            <YouTubeIcon color="primary" className={classes.hover} />
-          </IconButton>
-          <IconButton
-            className={clsx(classes.expand, {
-              [classes.expandOpen]: expanded,
-            })}
-            onClick={handleExpandClick}
-            aria-expanded={expanded}
-            aria-label="show more"
-          >
-            <ExpandMoreIcon />
-          </IconButton>
+          {github ? (
+            <IconButton aria-label="github link">
+              <GitHubIcon color="primary" className={classes.hover} />
+            </IconButton>
+          ) : (
+            <></>
+          )}
+          {website ? (
+            <IconButton aria-label="website">
+              <LanguageIcon color="primary" className={classes.hover} />
+            </IconButton>
+          ) : (
+            <></>
+          )}
+          {youtube ? (
+            <IconButton aria-label="youtube">
+              <YouTubeIcon color="primary" className={classes.hover} />
+            </IconButton>
+          ) : (
+            <></>
+          )}
         </CardActions> 
-        <Collapse in={expanded} timeout="auto" unmountOnExit>
-          <CardContent>
-            <Typography paragraph>Method:</Typography>
-            <Typography color="primary" paragraph>
-              {languages}
-            </Typography>
-          </CardContent>
-        </Collapse>
+        <CardContent>
+          <Typography variant="body2" className={classes.languages} align="center">
+            {languages.map(language => language + " ")}
+          </Typography>
+        </CardContent>
+        
         </Card>
       </Grid>
   )

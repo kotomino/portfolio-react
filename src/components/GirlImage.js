@@ -4,7 +4,6 @@ import { withStyles } from '@material-ui/core/styles';
 const styles = (theme) => ({
   root: {
     display: 'flex',
-    // backgroundColor: theme.palette.primary.light,
     overflow: 'hidden', 
     width: "90%",
     height: "90%",
