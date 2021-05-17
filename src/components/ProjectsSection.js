@@ -36,10 +36,10 @@ const Projects = (props) => {
   }, [])
 
   const projectsArray = projectData
-  console.log('projectsarray', projectsArray)
+  // console.log('projectsarray', projectsArray)
   const projects = projectsArray.map((project, i) => <Project key={i} name={project.name} description={project.description} image={project.image} languages={project.languages} github={project.github} youtube={project.youtube} website={project.website} />)
 
-  console.log('projects', projects)
+  // console.log('projects', projects)
   
 
   return (
