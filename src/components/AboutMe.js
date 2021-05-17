@@ -81,7 +81,7 @@ const AboutMe = (props) => {
             </Typography>
             <br/>
             <Grid container>
-              <Grid item item xs={4} align="left">
+              <Grid item xs={4} align="left">
                 <Typography color="secondary" display="inline" variant="body2">
                   &#8227;{' '}
                 </Typography>
