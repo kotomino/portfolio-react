@@ -1,4 +1,4 @@
-export default [
+const blogs = [
   {
     title: 'JavaScript: Preventing Parent Event When Child Event Is Triggered',
     url: 'https://i.imgur.com/w4Unb9a.png'
@@ -24,3 +24,5 @@ export default [
     url: 'https://i.imgur.com/sZ4QzPN.png'
   },
 ];
+
+export default blogs;
