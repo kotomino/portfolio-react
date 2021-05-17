@@ -21,7 +21,7 @@ const styles = (theme) => ({
     marginTop: 30,
     marginLeft: "1%",
     marginRight: "1%",
-    color: "#e0e0eb"
+    color: "#c2c2d6"
   },
   button: {
     marginTop: "15%",
