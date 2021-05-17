@@ -34,7 +34,7 @@ const styles = (theme) => ({
     color: "#e0e0eb"
   },
   purple: {
-    color: "#b3b3cc"
+    color: "#c2c2d6"
   },
   blogs: {
     marginLeft: '15%'
