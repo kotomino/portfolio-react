@@ -18,13 +18,13 @@ const styles = (theme) => ({
     alignItems: 'center',
   },
   desc: {
-    marginTop: 30,
+    marginTop: 25,
     marginLeft: "1%",
     marginRight: "1%",
     color: "#c2c2d6"
   },
   button: {
-    marginTop: "15%",
+    marginTop: "10%",
     marginLeft: "38%",
     color: 'white',
     '&:hover': {
@@ -35,7 +35,7 @@ const styles = (theme) => ({
     marginLeft: "1%",
   },
   hi: {
-    marginLeft: "-75%", 
+    marginLeft: "-78%", 
     color: "#e0e0eb"
   },
   text: {
@@ -55,12 +55,12 @@ const HomeBanner = (props) => {
     <section className={classes.root}>
       <Container className={classes.container}>
         <Grid container>
-          <Grid item md={6} xs={12} >
+          <Grid item md={7} xs={12} >
             <Typography variant="h6" align="center" className={classes.hi}>
               Hi, my name is
             </Typography>
             <Typography variant="h2" color="secondary" className={classes.text}>
-              Kotomi Noguchi
+              Kotomi Noguchi.
             </Typography>
             <Typography variant="h4" color="textSecondary" className={classes.title}>
               Full Stack Software Engineer
@@ -72,7 +72,7 @@ const HomeBanner = (props) => {
               Get In Touch
             </Button>
           </Grid>
-          <Grid item md={6} xs={12} className={classes.image}>
+          <Grid item md={5} xs={12} className={classes.image}>
             <GirlImage />
           </Grid>
         </Grid>
