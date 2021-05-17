@@ -1,12 +1,10 @@
 import React from 'react'
-import { Card, CardActions, CardContent, CardHeader, CardMedia, Collapse, Grid, IconButton, Typography } from '@material-ui/core'
+import { Card, CardActions, CardContent, CardHeader, CardMedia, Grid, IconButton, Typography } from '@material-ui/core'
 import { withStyles } from '@material-ui/core/styles';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import YouTubeIcon from '@material-ui/icons/YouTube';
 import LanguageIcon from '@material-ui/icons/Language';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { red } from '@material-ui/core/colors';
-import clsx from 'clsx';
 
 const styles = (theme) => ({
   root: {
@@ -49,9 +47,6 @@ const styles = (theme) => ({
 const Project = (props) => {
 
   const { classes, name, description, languages, image, github, website, youtube } = props;
-
-  const [expanded, setExpanded] = React.useState(false);
-
 
   return (
       <Grid item xs={12} md={6} lg={4}>
