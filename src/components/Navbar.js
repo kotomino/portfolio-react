@@ -89,7 +89,7 @@ const Navbar = () => {
                 </Link>
               </Grid>
               <Grid item s={2} md={1}>
-                <Button color="inherit" href={resume} target='_blank' className={classes.button} variant="outlined" color="secondary">
+                <Button href={resume} target='_blank' className={classes.button} variant="outlined" color="secondary">
                   Resume
                 </Button>
               </Grid>
