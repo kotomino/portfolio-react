@@ -52,9 +52,6 @@ const Project = (props) => {
 
   const [expanded, setExpanded] = React.useState(false);
 
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
 
   return (
       <Grid item xs={12} md={6} lg={4}>
@@ -68,7 +65,6 @@ const Project = (props) => {
         <div style={{ display:'flex', justifyContent:'center' }}>
           <CardMedia
             className={classes.media}
-            // style={{ width: 550, height: 400, paddingTop: '5%'}}
             src={image}
             component="img"
             title={name}
@@ -79,36 +75,34 @@ const Project = (props) => {
             {description}
           </Typography>
         </CardContent>
-        {/* { height < 500 ? <br/> : <></>} */}
+        <CardContent>
+          <Typography variant="body2" className={classes.languages} align="center">
+            {languages.map(language => language + " ")}
+          </Typography>
+        </CardContent>
         <CardActions disableSpacing>
           {github ? (
-            <IconButton aria-label="github link">
+            <IconButton aria-label="github link" href={github} target='_blank'>
               <GitHubIcon color="primary" className={classes.hover} />
             </IconButton>
           ) : (
             <></>
           )}
           {website ? (
-            <IconButton aria-label="website">
+            <IconButton aria-label="website" href={website} target='_blank'>
               <LanguageIcon color="primary" className={classes.hover} />
             </IconButton>
           ) : (
             <></>
           )}
           {youtube ? (
-            <IconButton aria-label="youtube">
+            <IconButton aria-label="youtube" href={youtube} target='_blank'>
               <YouTubeIcon color="primary" className={classes.hover} />
             </IconButton>
           ) : (
             <></>
           )}
         </CardActions> 
-        <CardContent>
-          <Typography variant="body2" className={classes.languages} align="center">
-            {languages.map(language => language + " ")}
-          </Typography>
-        </CardContent>
-        
         </Card>
       </Grid>
   )
