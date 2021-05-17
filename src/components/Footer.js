@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Container, Grid, IconButton, Typography } from '@material-ui/core'
+import { Container, Grid, IconButton, Typography } from '@material-ui/core'
 import { Link } from "react-scroll";
 import GitHubIcon from '@material-ui/icons/GitHub';
 import YouTubeIcon from '@material-ui/icons/YouTube';
