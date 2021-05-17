@@ -22,7 +22,7 @@ const projects = [
     description: "A review app for 8000+ U.S. breweries. Features 3rd party login and a search feature.",
     image: "https://s3.gifyu.com/images/brew.gif",
     github: 'https://github.com/kotomino/life-is-brewtiful-project',
-    website: 'yes',
+    website: 'https://life-is-brewtiful.herokuapp.com/',
     youtube: 'https://www.youtube.com/watch?v=4VAVCJOnoYU&t=216s',
     languages: ["Rails", "MaterializeCSS", "OmniAuth"]
   },
@@ -31,7 +31,7 @@ const projects = [
     description: "A Sinatra web app that allows users to track their workout goals and personal records.",
     image: "https://s3.gifyu.com/images/prc666de96689e5cfd.gif",
     github: 'https://github.com/kotomino/workout-log-project',
-    website: 'yes',
+    website: 'https://pr-journal.herokuapp.com/',
     youtube: 'https://www.youtube.com/watch?v=f6OTzxdWxNo&t=94s',
     languages: ["Sinatra", "MaterializeCSS"]
   },
@@ -40,7 +40,7 @@ const projects = [
     description: "Portfolio site you are currently on. First version since graduating bootcamp.",
     image: "https://s3.gifyu.com/images/prjournal.gif",
     github: 'https://github.com/kotomino/portfolio-react',
-    website: 'yes',
+    website: 'http://localhost:3000/',
     youtube: '',
     languages: ["React", "Material UI"]
   }
