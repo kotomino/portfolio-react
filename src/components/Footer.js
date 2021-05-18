@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Grid, IconButton, Typography } from '@material-ui/core'
+import { Container, Grid, Hidden, IconButton, Typography } from '@material-ui/core'
 import { Link } from "react-scroll";
 import GitHubIcon from '@material-ui/icons/GitHub';
 import YouTubeIcon from '@material-ui/icons/YouTube';
@@ -16,7 +16,7 @@ const styles = (theme) => ({
   },
   container: {
     marginTop: theme.spacing(5),
-    marginBottom: theme.spacing(10),
+    marginBottom: theme.spacing(15),
     position: 'relative',
     display: 'flex',
     flexDirection: 'column',
@@ -77,7 +77,7 @@ const Footer = (props) => {
                </IconButton>
             </div>
           </Grid>
-  
+          <Hidden smDown>
           <Grid item xs={12} sm={6} md={6} className={classes.right}>
             <div>
               <Typography color="textSecondary" variant="h6" align="center">
@@ -114,7 +114,7 @@ const Footer = (props) => {
               </Link>
             </div>
           </Grid>
-
+          </Hidden>
           <Grid item xs={12} md={12}>
             <div className={classes.middle} align="center">
               <Typography color="primary">

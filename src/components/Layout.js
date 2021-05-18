@@ -1,11 +1,12 @@
-import { makeStyles } from '@material-ui/core';
+import { Hidden, makeStyles } from '@material-ui/core';
 import React from 'react'
 import Footer from './Footer';
+import MobileNav from './MobileNav';
 import Navbar from './Navbar';
 
 const useStyles = makeStyles({
   page: {
-    width: '100%'
+    width: '100%', 
   }
 })
 
@@ -15,11 +16,14 @@ const Layout = ({ children }) => {
   
   return (
     <div>
-      <Navbar />
+      <Hidden smDown>
+        <Navbar />
+      </Hidden>
       <div className={classes.page}>
         { children }
       </div>
       <Footer/>
+      <MobileNav/>
     </div>
   )
 }

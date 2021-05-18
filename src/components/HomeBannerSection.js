@@ -1,4 +1,4 @@
-import { Button, Container, Grid, Typography } from '@material-ui/core'
+import { Box, Button, Container, Grid, Hidden, Typography } from '@material-ui/core'
 import React from 'react'
 import { withStyles } from '@material-ui/core/styles';
 import GirlImage from './GirlImage';
@@ -10,8 +10,8 @@ const styles = (theme) => ({
     overflow: 'hidden',
   },
   container: {
-    marginTop: theme.spacing(25),
-    marginBottom: theme.spacing(15),
+    marginTop: theme.spacing(20),
+    marginBottom: theme.spacing(10),
     position: 'relative',
     display: 'flex',
     flexDirection: 'column',
@@ -24,8 +24,9 @@ const styles = (theme) => ({
     color: "#d1d1e0"
   },
   button: {
+    justifyContent: 'center',
     marginTop: "10%",
-    marginLeft: "38%",
+    // marginLeft: "38%",
     color: 'white',
     '&:hover': {
       color: '#248f8f',
@@ -54,8 +55,8 @@ const HomeBanner = (props) => {
   return (
     <section className={classes.root}>
       <Container className={classes.container}>
-        <Grid container>
-          <Grid item md={7} xs={12} >
+        <Grid container style={{justifyContent: 'center'}}>
+          <Grid item md={7} xs={12} className={classes.grid}>
             <Typography variant="h6" className={classes.hi}>
               Hi, my name is
             </Typography>
@@ -68,13 +69,17 @@ const HomeBanner = (props) => {
             <Typography color="primary" className={classes.desc}>
               I'm an Atlanta-based software engineer with a passion for making positive impact and helping underprivileged groups through technology. 
             </Typography>
-            <Button variant="outlined" color="secondary" className={classes.button} href="mailto:kotomi.noguchi@gmail.com">
-              Get In Touch
-            </Button>
+            <Box textAlign='center'>
+              <Button variant="outlined" color="secondary" className={classes.button} href="mailto:kotomi.noguchi@gmail.com">
+                Get In Touch
+              </Button>
+            </Box>
           </Grid>
-          <Grid item md={5} xs={12} className={classes.image}>
-            <GirlImage />
-          </Grid>
+          <Hidden smDown >
+            <Grid item md={5} xs={12} className={classes.image}>
+              <GirlImage />
+            </Grid>
+          </Hidden>
         </Grid>
       </Container>
     </section>

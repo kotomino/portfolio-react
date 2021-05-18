@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Container, Grid, Typography } from '@material-ui/core'
+import { Box, Container, Grid, Hidden, Typography } from '@material-ui/core'
 import bricks from '../assets/bricks.png';
 import { withStyles } from '@material-ui/core/styles';
 import Aos from 'aos';
@@ -13,7 +13,7 @@ const styles = (theme) => ({
   },
   container: {
     marginTop: theme.spacing(20),
-    marginBottom: theme.spacing(20),
+    marginBottom: theme.spacing(15),
     position: 'relative',
     display: 'flex',
     flexDirection: 'column',
@@ -46,14 +46,16 @@ const AboutMe = (props) => {
   return (
     <section className={classes.root} id="about" >
       <Container className={classes.container} data-aos="fade-right">
-        <Grid container spacing={10}>
-          <Grid item md={6}>
-            <img
-              src={bricks} 
-              className={classes.image}
-              alt="blue"
-            />
-          </Grid>
+        <Grid container spacing={5}>
+          <Hidden smDown >
+            <Grid item md={6}>
+              <img
+                src={bricks} 
+                className={classes.image}
+                alt="blue"
+              />
+            </Grid>
+          </Hidden>
           <Grid item md={6} align="center">
             <div className={classes.aboutMe} >
               <Typography variant="h5" color="secondary" display="inline">
@@ -63,30 +65,32 @@ const AboutMe = (props) => {
                 About Me
               </Typography>
             </div>
-            <Grid container >
-              <Grid item md={12} align="left" >
-                <Typography color="primary" align="left" display="inline">
-                  Hello! My name is Kotomi and I enjoy developing things on the web. My time as a{' '} 
-                </Typography>
-                <Typography color="textSecondary" align="left" display="inline">
-                  Technical Account Manager in e-commerce{' '}
-                </Typography>
-                <Typography color="primary" align="left" display="inline">
-                heightened my interest in programming; while witnessing developers magically creating features and resolving bugs, I became determined to be a part of that magic!
-                </Typography>
-              </Grid>
-              <Grid item md={12} align="left" className={classes.desc} >
-                <Typography color="primary" align="left" display="inline">
-                  Here are some of the{' '} 
-                </Typography>
-                <Typography color="textSecondary" align="left" display="inline">
-                  technologies{' '}
-                </Typography>
-                <Typography color="primary" align="left" display="inline">  
-                  I've been working with recently:
-                </Typography>
+            <Box textAlign='center'>
+              <Grid container >
+                <Grid item md={12} align="left" >
+                  <Typography color="primary" align="left" display="inline">
+                    Hello! My name is Kotomi and I enjoy developing things on the web. My time as a{' '} 
+                  </Typography>
+                  <Typography color="textSecondary" align="left" display="inline">
+                    Technical Account Manager in e-commerce{' '}
+                  </Typography>
+                  <Typography color="primary" align="left" display="inline">
+                  heightened my interest in programming; while witnessing developers magically creating features and resolving bugs, I became determined to be a part of that magic!
+                  </Typography>
                 </Grid>
-            </Grid>
+                <Grid item md={12} align="left" className={classes.desc} >
+                  <Typography color="primary" align="left" display="inline">
+                    Here are some of the{' '} 
+                  </Typography>
+                  <Typography color="textSecondary" align="left" display="inline">
+                    technologies{' '}
+                  </Typography>
+                  <Typography color="primary" align="left" display="inline">  
+                    I've been working with recently:
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Box>
             <br/>
             <Grid container>
               <Grid item xs={4} align="left">

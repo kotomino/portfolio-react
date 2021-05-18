@@ -12,7 +12,7 @@ const styles = (theme) => ({
     overflow: 'hidden',
   },
   container: {
-    marginTop: theme.spacing(20),
+    marginTop: theme.spacing(10),
     marginBottom: theme.spacing(30),
     position: 'relative',
     display: 'flex',
@@ -29,9 +29,9 @@ const styles = (theme) => ({
   form: {
     display: 'flex',
     flexWrap: 'wrap',
-    margin: 30,
+    marginTop: 30,
     padding: 10,
-    width: 500
+    width: "100%"
   },
   textField: {
     color: '#b3b3cc'
@@ -77,10 +77,6 @@ const Contact = (props) => {
           message
         }
     }
-      
-    
-    
-    
   }
 
   useEffect(() => {
@@ -111,7 +107,7 @@ const Contact = (props) => {
   return (
     <section className={classes.root} id="contact">
       <Container className={classes.container} data-aos="fade-left">
-        <div className={classes.blogs} >
+        <div>
           <Typography variant="h5" color="secondary" display="inline">
             04.{' '} 
           </Typography>
@@ -122,85 +118,87 @@ const Contact = (props) => {
         <Typography variant="h3" color="textSecondary">
           Get In Touch
         </Typography>
-        <Grid item lg={4} md={5} sm={8} xs={12}>
+        <Grid item lg={4} md={5} sm={8} xs={12} align="center">
           <Typography color="primary" className={classes.thanks}>
             My inbox is always open for new opportunities and connections. Feel free to reach out any time!
           </Typography>
         </Grid>
-        <form className={classes.form} onSubmit={handleSubmit}>
-          < Grid container spacing={3} align="center">
-            <Grid item xs={12}>
-              <TextField
-                id="name"
-                label="Your Name"
-                name="name"
-                value={name}
-                onChange={handleChange}
-                fullWidth
-                variant="filled" 
-                InputProps={{
-                  className: classes.textField
-                }}
-              />
-              <ValidationError 
-                prefix="Name" 
-                field="name"
-                errors={state.errors}
-              />
+        <Grid item lg={4} md={5} sm={8} xs={12}>
+          <form className={classes.form} onSubmit={handleSubmit}>
+            <Grid container spacing={3} align="center">
+              <Grid item xs={12}>
+                <TextField
+                  id="name"
+                  label="Your Name"
+                  name="name"
+                  value={name}
+                  onChange={handleChange}
+                  fullWidth
+                  variant="filled" 
+                  InputProps={{
+                    className: classes.textField
+                  }}
+                />
+                <ValidationError 
+                  prefix="Name" 
+                  field="name"
+                  errors={state.errors}
+                />
+                </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  id="email"
+                  label="Your Email"
+                  name="email"
+                  value={email}
+                  onChange={handleChange}
+                  fullWidth
+                  variant="filled"
+                  InputProps={{
+                    className: classes.textField
+                  }}
+                />
+                <ValidationError 
+                  prefix="Email" 
+                  field="email"
+                  errors={state.errors}
+                />
               </Grid>
-            <Grid item xs={12}>
-              <TextField
-                id="email"
-                label="Your Email"
-                name="email"
-                value={email}
-                onChange={handleChange}
-                fullWidth
-                variant="filled"
-                InputProps={{
-                  className: classes.textField
-                }}
-              />
-              <ValidationError 
-                prefix="Email" 
-                field="email"
-                errors={state.errors}
-              />
+              <Grid item xs={12}>
+                <TextField
+                  id="message"
+                  name="message"
+                  variant="filled"
+                  label="Your Message"
+                  value={message}
+                  onChange={handleChange}
+                  multiline
+                  fullWidth
+                  rows={8}
+                  placeholder="Type your message here..."
+                  InputProps={{
+                    className: classes.textField
+                  }}
+                />
+                <ValidationError 
+                  prefix="Message" 
+                  field="message"
+                  errors={state.errors}
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <Button 
+                  type="submit" 
+                  variant="outlined" 
+                  color="secondary" 
+                  disabled={state.submitting}
+                  className={classes.button}
+                  >Submit
+                </Button>
+              </Grid>
             </Grid>
-            <Grid item xs={12}>
-              <TextField
-                id="message"
-                name="message"
-                variant="filled"
-                label="Your Message"
-                value={message}
-                onChange={handleChange}
-                multiline
-                fullWidth
-                rows={8}
-                placeholder="Type your message here..."
-                InputProps={{
-                  className: classes.textField
-                }}
-              />
-              <ValidationError 
-                prefix="Message" 
-                field="message"
-                errors={state.errors}
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <Button 
-                type="submit" 
-                variant="outlined" 
-                color="secondary" 
-                disabled={state.submitting}
-                className={classes.button}
-                >Submit
-              </Button>
-            </Grid>
-          </Grid>
-        </form>
+          </form>
+        </Grid>
 
       </Container>
     </section>

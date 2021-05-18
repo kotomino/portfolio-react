@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import Slider from './Slider';
 import { withStyles } from '@material-ui/core/styles';
-import { Button, Container, Grid, Typography } from '@material-ui/core';
+import { Box, Button, Container, Grid, Hidden, Typography } from '@material-ui/core';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import Typical from 'react-typical';
@@ -13,7 +13,7 @@ const styles = (theme) => ({
     backgroundColor: "#1f1f2e",
   },
   container: {
-    marginTop: theme.spacing(20),
+    marginTop: theme.spacing(15),
     marginBottom: theme.spacing(30),
     position: 'relative',
     display: 'flex',
@@ -40,8 +40,7 @@ const styles = (theme) => ({
     marginLeft: '15%'
   },
   button: {
-    marginTop: 70,
-    marginLeft: "32%",
+    marginTop: "8%",
     color: 'white',
     '&:hover': {
       color: '#248f8f',
@@ -70,10 +69,13 @@ const Blogs = (props) => {
               </Typography>
             </div>
           </Grid>
+          
           <Grid item xs={12} md={6}>
             <Slider />
           </Grid>
+          
           <Grid item xs={12} md={6}>
+          <Hidden smDown>
             <div className={classes.text}>
               <Typography variant="h3" align="center" color="textSecondary" display="inline">
                 Explore{' '} 
@@ -95,9 +97,12 @@ const Blogs = (props) => {
                   />
               </Typography>
             </div>
-            <Button variant="outlined" color="secondary" className={classes.button} target='_blank' href="https://kotomi-noguchi.medium.com/">
-              View Blogs
-            </Button>
+            </Hidden>
+            <Box align="center">
+              <Button variant="outlined" color="secondary" className={classes.button} target='_blank' href="https://kotomi-noguchi.medium.com/">
+                View Blogs
+              </Button>
+            </Box>
           </Grid>
           <Grid item>
             
