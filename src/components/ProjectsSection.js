@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { withStyles } from '@material-ui/core/styles';
-import { Box, Container, Grid, Hidden, Typography } from '@material-ui/core';
+import { Container, Grid, Typography } from '@material-ui/core';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import Project from './Project';

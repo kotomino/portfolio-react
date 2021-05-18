@@ -21,18 +21,17 @@ const useStyles = makeStyles({
 const MobileNav = () => {
 
   const classes = useStyles();
-  const [value, setValue] = React.useState(0);
+  // const [value, setValue] = React.useState(0);
 
   return (
     <Box display={{ xs: 'block', md: 'none' }}>
       <BottomNavigation
-        value={value}
-        onChange={(event, newValue) => {
-          setValue(newValue);
-        }}
-        showLabels
+        // value={value}
+        // onChange={(event, newValue) => {
+        //   setValue(newValue);
+        // }}
+        // showLabels
         className={classes.root}
-        
       > 
         <Link to="about" smooth={true} duration={1200} >
           <BottomNavigationAction label="About" icon={<InfoIcon />} />
