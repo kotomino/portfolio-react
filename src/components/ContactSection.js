@@ -70,7 +70,12 @@ const Contact = (props) => {
       case "message":
         setMessage(e.target.value);
         break;
-
+      default: 
+        return {
+          name,
+          email,
+          message
+        }
     }
       
     

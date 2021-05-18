@@ -44,7 +44,7 @@ const Navbar = () => {
         <Toolbar>
           <Container className={classes.container}>
             <Grid container spacing={1}>
-              <Grid item xs={0} sm={0} md={5} lg={7} xl={7} />
+              <Grid item xs={false} sm={false} md={5} lg={7} xl={7} />
               <Grid item xs={12} sm={12} md={7} lg={5} xl={5} align="right">
                 <Link to="about" smooth={true} duration={600}>
                     <Typography variant="body2" color="secondary" display="inline" >
