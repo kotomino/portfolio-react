@@ -36,9 +36,6 @@ const styles = (theme) => ({
   purple: {
     color: "#c2c2d6"
   },
-  blogs: {
-    marginLeft: '15%'
-  },
   button: {
     marginTop: "8%",
     color: 'white',
@@ -59,7 +56,7 @@ const Blogs = (props) => {
     <section className={classes.root} id="blogs">
       <Container className={classes.container} data-aos="fade-left">
         <Grid container spacing={5}>
-          <Grid item xs={12} align="left">
+          <Grid item xs={12} align="center">
             <div className={classes.blogs} >
               <Typography variant="h5" color="secondary" display="inline">
                 02.{' '} 
@@ -69,7 +66,6 @@ const Blogs = (props) => {
               </Typography>
             </div>
           </Grid>
-          
           <Grid item xs={12} md={6}>
             <Slider />
           </Grid>
