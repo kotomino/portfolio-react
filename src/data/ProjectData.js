@@ -1,7 +1,7 @@
 const projects = [
   {
     name: "Vacay Away",
-    description: "A web app that allows users to flexibly plan their vacation days with activities.",
+    description: "A web app that allows users to flexibly plan their vacation days. The activities can easily be reassigned days.",
     image: "https://s3.gifyu.com/images/vacay48e9a55e7e07c64c.gif",
     github: 'https://github.com/kotomino/vacay-away-frontend',
     website: '',
@@ -10,7 +10,7 @@ const projects = [
   },
   {
     name: "Flappy Bernie",
-    description: "A JavaScript web game based off of the popular game Flappy Bird.",
+    description: "A JavaScript web game based off of the popular game Flappy Bird. Get a point for every pair of pipes you pass.",
     image: "https://s3.gifyu.com/images/bernie.gif",
     github: 'https://github.com/kotomino/flappy-bernie-frontend',
     website: '',
@@ -37,8 +37,8 @@ const projects = [
   },
   {
     name: "Portfolio v1",
-    description: "Portfolio site you are currently on. First version since graduating bootcamp.",
-    image: "https://s3.gifyu.com/images/prjournal.gif",
+    description: "Portfolio site you are currently viewing. This is my first version since graduating bootcamp.",
+    image: "https://s3.gifyu.com/images/portfolio.gif",
     github: 'https://github.com/kotomino/portfolio-react',
     website: 'http://localhost:3000/',
     youtube: '',
