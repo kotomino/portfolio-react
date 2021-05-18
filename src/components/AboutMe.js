@@ -33,6 +33,9 @@ const styles = (theme) => ({
   desc: {
     marginTop: 15
   },
+  margin: {
+    marginLeft: "13%"
+  }
 
 })
 
@@ -93,7 +96,7 @@ const AboutMe = (props) => {
             </Box>
             <br/>
             <Grid container>
-              <Grid item xs={4} align="left">
+              <Grid item xs={4} align="left" className={classes.margin}>
                 <Typography color="secondary" display="inline" variant="body2">
                   &#8227;{' '}
                 </Typography>
