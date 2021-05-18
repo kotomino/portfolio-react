@@ -8,7 +8,7 @@ import 'aos/dist/aos.css';
 const styles = (theme) => ({
   root: {
     display: 'flex',
-    backgroundColor: "#29293d",
+    backgroundColor: "#1f1f2e",
     overflow: 'hidden',
   },
   container: {
@@ -20,8 +20,8 @@ const styles = (theme) => ({
     alignItems: 'center',
   },
   aboutMe: {
-    marginTop: 30,
-    marginBottom: 30
+    marginTop: 10,
+    marginBottom: 20
   },
   white: {
     color: "#e0e0eb"
@@ -31,7 +31,7 @@ const styles = (theme) => ({
     width: '95%'
   },
   desc: {
-    marginTop: 20
+    marginTop: 15
   },
 
 })
@@ -64,21 +64,29 @@ const AboutMe = (props) => {
               </Typography>
             </div>
             <Grid container >
-            <Grid item md={12} align="left" >
-              <Typography color="primary" align="left" display="inline">
-                Hello! My name is Kotomi and I enjoy developing things on the web. My time as a{' '} 
-              </Typography>
-              <Typography color="textSecondary" align="left" display="inline">
-                Technical Account Manager in e-commerce{' '}
-              </Typography>
-              <Typography color="primary" align="left" display="inline">
-              heightened my interest in programming; while witnessing developers magically creating features and resolving bugs I became determined to be a part of that magic!
-              </Typography>
+              <Grid item md={12} align="left" >
+                <Typography color="primary" align="left" display="inline">
+                  Hello! My name is Kotomi and I enjoy developing things on the web. My time as a{' '} 
+                </Typography>
+                <Typography color="textSecondary" align="left" display="inline">
+                  Technical Account Manager in e-commerce{' '}
+                </Typography>
+                <Typography color="primary" align="left" display="inline">
+                heightened my interest in programming; while witnessing developers magically creating features and resolving bugs, I became determined to be a part of that magic!
+                </Typography>
               </Grid>
+              <Grid item md={12} align="left" className={classes.desc} >
+                <Typography color="primary" align="left" display="inline">
+                  Here are some of the{' '} 
+                </Typography>
+                <Typography color="textSecondary" align="left" display="inline">
+                  technologies{' '}
+                </Typography>
+                <Typography color="primary" align="left" display="inline">  
+                  I've been working with recently:
+                </Typography>
+                </Grid>
             </Grid>
-            <Typography color="primary" align="left" className={classes.desc}>
-              Here are some of the technologies I've been working with recently:
-            </Typography>
             <br/>
             <Grid container>
               <Grid item xs={4} align="left">
@@ -142,7 +150,7 @@ const AboutMe = (props) => {
             </Grid>
             <br/>
             <Typography color="primary" align="left" >
-              When not coding you can find me rock climbing, watching anime, or 
+              When not coding you can find me rock climbing, watching anime, or hiking the Georgia mountains.
             </Typography>
           </Grid>
         </Grid>

@@ -9,7 +9,7 @@ import { red } from '@material-ui/core/colors';
 const styles = (theme) => ({
   root: {
     // minHeight: 430,
-    backgroundColor: "#33334d",
+    backgroundColor: "#29293d",
   },
   media: {
     margin: 0,
@@ -41,6 +41,9 @@ const styles = (theme) => ({
   },
   languages: {
     color: "#a3a3c2",
+  },
+  icons: {
+    justifyContent: 'center'
   }
 })
 
@@ -50,11 +53,12 @@ const Project = (props) => {
 
   return (
       <Grid item xs={12} md={6} lg={4}>
-        <Card container className={classes.root} elevation={10} >
+        <Card container="true" className={classes.root} elevation={10} >
           <CardHeader
           classes={{
             title: classes.title,
           }}
+          titleTypographyProps={{variant:'h4' }}
           title={props.name}
         />
         <div style={{ display:'flex', justifyContent:'center' }}>
@@ -72,10 +76,16 @@ const Project = (props) => {
         </CardContent>
         <CardContent>
           <Typography variant="body2" className={classes.languages} align="center">
-            {languages.map(language => language + " ")}
+            {languages.map((language, i) => {
+              if (languages[i + 1]) {
+                return language + " | "
+              } else {
+                return language
+              }
+            })}
           </Typography>
         </CardContent>
-        <CardActions disableSpacing>
+        <CardActions disableSpacing className={classes.icons}>
           {github ? (
             <IconButton aria-label="github link" href={github} target='_blank'>
               <GitHubIcon color="primary" className={classes.hover} />

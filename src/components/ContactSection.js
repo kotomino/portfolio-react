@@ -8,7 +8,7 @@ import 'aos/dist/aos.css';
 const styles = (theme) => ({
   root: {
     display: 'flex',
-    backgroundColor: "#29293d",
+    backgroundColor: "#1f1f2e",
     overflow: 'hidden',
   },
   container: {
@@ -117,7 +117,7 @@ const Contact = (props) => {
         <Typography variant="h3" color="textSecondary">
           Get In Touch
         </Typography>
-        <Grid item md={5} sm={7} xs={11}>
+        <Grid item lg={4} md={5} sm={8} xs={12}>
           <Typography color="primary" className={classes.thanks}>
             My inbox is always open for new opportunities and connections. Feel free to reach out any time!
           </Typography>

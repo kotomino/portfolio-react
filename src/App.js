@@ -8,10 +8,10 @@ import Layout from './components/Layout';
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: '#b3b3cc'
+      main: '#c2c2d6'
     },
     secondary: {
-      main: '#248f8f'
+      main: '#29a3a3'
     },
     text: {
       primary: "#3F3D56",
@@ -30,7 +30,7 @@ const theme = createMuiTheme({
     },
     h4: {
       fontFamily: 'Montserrat',
-      fontSize: "1.6rem",
+      fontSize: "1.4rem",
       fontWeight: 600
     },
     h5: {
@@ -42,6 +42,9 @@ const theme = createMuiTheme({
       fontFamily: 'Montserrat',
       fontSize: "1rem",
       fontWeight: 600
+    },
+    body1: {
+      fontFamily: 'Montserrat',
     },
     body2: {
       fontFamily: 'Inconsolata',

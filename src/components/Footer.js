@@ -11,7 +11,7 @@ import { withStyles } from '@material-ui/core/styles';
 const styles = (theme) => ({
   root: {
     display: 'flex',
-    backgroundColor: "#29293d",
+    backgroundColor: "#1f1f2e",
     overflow: 'hidden',
   },
   container: {
@@ -23,20 +23,23 @@ const styles = (theme) => ({
     alignItems: 'center',
   },
   middle: {
-    marginTop: 100
+    marginTop: 70
   },
-  // right: {
-  //   marginTop: 30
-  // },
+  right: {
+    position: 'relative',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
   linkItem: {
     '&:hover': {
-      color: 'white',
+      color: '#33cccc',
       cursor: 'pointer'
    }
   },
   iconItem: {
     "&:hover": {
-        color: 'white',
+        color: '#33cccc',
     }
 },
 })
@@ -49,7 +52,7 @@ const Footer = (props) => {
     <section className={classes.root}>
       <Container className={classes.container}>
         <Grid container>
-          <Grid item xs={4} align="center">
+          <Grid item xs={12} sm={6} md={6} align="center">
             <div className={classes.left}>
               <Typography color="textSecondary" variant="h6">
                 GET IN TOUCH
@@ -57,33 +60,27 @@ const Footer = (props) => {
               <Typography color="primary">
                 kotomi.noguchi@gmail.com
               </Typography>
-              <IconButton aria-label="github link">
-                <GitHubIcon color="primary" className={classes.iconItem} />
+              <IconButton aria-label="github link" href="https://github.com/kotomino" target='_blank'>
+                <GitHubIcon color="primary" className={classes.iconItem}/>
               </IconButton>
-              <IconButton aria-label="github link">
+              <IconButton aria-label="linkedin link" href="https://www.linkedin.com/in/kotomi-noguchi/" target='_blank'>
                 <LinkedInIcon color="primary" className={classes.iconItem}/>
               </IconButton>
-              <IconButton aria-label="website">
+              <IconButton aria-label="instagram" href="https://www.instagram.com/kotoguchi/?hl=en" target='_blank'>
                 <InstagramIcon color="primary" className={classes.iconItem}/>
               </IconButton>
-              <IconButton aria-label="youtube">
+              <IconButton aria-label="youtube" href="https://www.youtube.com/channel/UCL46uA_XLKC2ESMmVU_H0xg/featured" target='_blank'>
                 <YouTubeIcon color="primary" className={classes.iconItem}/>
                </IconButton>
-               <IconButton aria-label="youtube">
+               <IconButton aria-label="gmail" href="mailto:kotomi.noguchi@gmail.com"> 
                 <EmailIcon color="primary" className={classes.iconItem}/>
                </IconButton>
             </div>
           </Grid>
-          <Grid item xs={4}>
-            <div className={classes.middle} align="center">
-              <Typography color="primary">
-                Designed and Built by Kotomi Noguchi
-              </Typography>
-            </div>
-          </Grid>
-          <Grid item xs={4} align="center">
-            <div className={classes.right}>
-              <Typography color="textSecondary" variant="h6">
+  
+          <Grid item xs={12} sm={6} md={6} className={classes.right}>
+            <div>
+              <Typography color="textSecondary" variant="h6" align="center">
                 LINKS
               </Typography>
               <Link to="about" smooth={true} duration={1200}>
@@ -117,6 +114,15 @@ const Footer = (props) => {
               </Link>
             </div>
           </Grid>
+
+          <Grid item xs={12} md={12}>
+            <div className={classes.middle} align="center">
+              <Typography color="primary">
+                Designed and Built by Kotomi Noguchi
+              </Typography>
+            </div>
+          </Grid>
+
         </Grid>
       </Container>
     </section>

@@ -7,24 +7,31 @@ import { Button, Container, fade, Grid, makeStyles, Toolbar, Typography } from '
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    backgroundColor: "#29293d",
+    backgroundColor: "#1f1f2e",
+  },
+  container: {
+    position: 'relative',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
   },
   navbar: {
     backgroundColor: fade("#F0FFFF", 0),
   },
   navItem: {
-    color: "#e0e0eb",
+    color: "#d1d1e0",
     '&:hover': {
       color: '#248f8f',
       cursor: 'pointer'
    },
+   marginRight: "4%"
   },
   button: {
     color: 'white',
     '&:hover': {
       color: '#248f8f',
    },
-  },
+  }
 }));
 
 const Navbar = () => {
@@ -35,60 +42,50 @@ const Navbar = () => {
     <div className={classes.root}>
       <AppBar position="static" className={classes.navbar} elevation={0}>
         <Toolbar>
-          <Container>
+          <Container className={classes.container}>
             <Grid container spacing={1}>
-              <Grid item s={2} md={7} />
-              <Grid item s={2} md={1}>
+              <Grid item xs={0} sm={0} md={5} lg={7} xl={7} />
+              <Grid item xs={12} sm={12} md={7} lg={5} xl={5} align="right">
                 <Link to="about" smooth={true} duration={600}>
-                  <div className={classes.navItem}>
                     <Typography variant="body2" color="secondary" display="inline" >
                       01.{' '}
                     </Typography>
                     <Typography variant="body2" className={classes.navItem} color="primary" display="inline">
                       About
                     </Typography>
-                    </div>
+                    
                 </Link>
                 
-              </Grid>
-              <Grid item s={2} md={1}>
                 <Link to="blogs" smooth={true} duration={1200}>
-                <div className={classes.navItem}>
+                
                     <Typography variant="body2" color="secondary" display="inline">
                       02.{' '}
                     </Typography>
                     <Typography variant="body2" className={classes.navItem} color="primary" display="inline">
-                      &nbsp;Blogs
+                      Blogs
                     </Typography>
-                  </div>
+                  
                 </Link>
-              </Grid>
-              <Grid item s={2} md={1}>
                 <Link to="projects" smooth={true} duration={1200} className={classes.navItem}>
-                  <div className={classes.navItem}>
+                  
                     <Typography variant="body2" color="secondary" display="inline">
                       03.{' '}
                     </Typography>
                     <Typography variant="body2" className={classes.navItem} display="inline">
                       Projects
                     </Typography>
-                  </div>
+                  
                 </Link>
-              </Grid>
-              
-              <Grid item s={2} md={1}>
                 <Link to="contact" smooth={true} duration={1400}>
-                  <div className={classes.navItem}>
+                  
                     <Typography variant="body2" color="secondary" display="inline">
                       04.{' '}
                     </Typography>
                     <Typography variant="body2" className={classes.navItem} color="primary" display="inline">
                     Contact
                     </Typography>
-                  </div>
+                  
                 </Link>
-              </Grid>
-              <Grid item s={2} md={1}>
                 <Button href={resume} target='_blank' className={classes.button} variant="outlined" color="secondary">
                   Resume
                 </Button>

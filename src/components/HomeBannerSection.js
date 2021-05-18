@@ -6,7 +6,7 @@ import GirlImage from './GirlImage';
 const styles = (theme) => ({
   root: {
     display: 'flex',
-    backgroundColor: "#29293d",
+    backgroundColor: "#1f1f2e",
     overflow: 'hidden',
   },
   container: {
@@ -21,7 +21,7 @@ const styles = (theme) => ({
     marginTop: 25,
     marginLeft: "1%",
     marginRight: "1%",
-    color: "#c2c2d6"
+    color: "#d1d1e0"
   },
   button: {
     marginTop: "10%",
@@ -35,7 +35,7 @@ const styles = (theme) => ({
     marginLeft: "1%",
   },
   hi: {
-    marginLeft: "-78%", 
+    marginLeft: "2%", 
     color: "#e0e0eb"
   },
   text: {
@@ -56,7 +56,7 @@ const HomeBanner = (props) => {
       <Container className={classes.container}>
         <Grid container>
           <Grid item md={7} xs={12} >
-            <Typography variant="h6" align="center" className={classes.hi}>
+            <Typography variant="h6" className={classes.hi}>
               Hi, my name is
             </Typography>
             <Typography variant="h2" color="secondary" className={classes.text}>
@@ -66,7 +66,7 @@ const HomeBanner = (props) => {
               Full Stack Software Engineer
             </Typography>
             <Typography color="primary" className={classes.desc}>
-              I'm an Atlanta-based software engineer with a passion for making positive impact through technology. 
+              I'm an Atlanta-based software engineer with a passion for making positive impact and helping underprivileged groups through technology. 
             </Typography>
             <Button variant="outlined" color="secondary" className={classes.button} href="mailto:kotomi.noguchi@gmail.com">
               Get In Touch
